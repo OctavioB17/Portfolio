@@ -1,13 +1,10 @@
-import { Avatar } from '@mui/material'
 import React from 'react'
 import { AvatarApearAnimationProp } from '../../interfaces/animations/Animations'
 import { animated } from '@react-spring/web'
 
-const OBAvatar: React.FC<AvatarApearAnimationProp> = ({sx, spring}): JSX.Element => {
+const OBAvatar: React.FC<AvatarApearAnimationProp> = ({style, spring}): JSX.Element => {
   return (
-    <animated.div style={{...spring}}>
-      <Avatar sx={{...sx}} src='/src/assets/images/Octavio-Bruza.jpg' alt='Octavio Bruza'/>
-    </animated.div>
+    <animated.img style={{...style, ...spring, borderRadius: '100%'}} src='/src/assets/images/Octavio-Bruza.jpg' alt='Octavio Bruza'/>
   )
 }
 

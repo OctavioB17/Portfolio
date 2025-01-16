@@ -1,13 +1,14 @@
 import { CSSProperties, ReactNode } from "react";
-import { MuiStyle } from "../MUI";
 import { SpringValue } from "@react-spring/web";
+import { CSSStyles } from "../Reusable";
 
 export interface TextLayerUpProps {
-    node: ReactNode,
-    style: CSSProperties,
+  node: ReactNode;
+  style: CSSProperties;
+  onAnimationStart?: () => void; 
 }
 
-export interface AvatarApearAnimationProp extends MuiStyle {
+export interface AvatarApearAnimationProp extends CSSStyles {
     spring?: {
         x: SpringValue<number>;
         y: SpringValue<number>;
