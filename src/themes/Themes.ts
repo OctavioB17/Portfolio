@@ -17,7 +17,8 @@ export const themeOptions = createTheme({
         },
         button: {
             main: '#f582ae',
-            text: '#001858'
+            textPrimary: '#001858',
+            textSecondary: '#fffffe'
         },
         background: {
             default: '#fef6e4'

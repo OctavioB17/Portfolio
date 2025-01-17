@@ -19,7 +19,7 @@ const AvatarApearAnimation = () => {
       to: { height: screenHeight, width: screenWidth },
       config: { tension: 50, friction: 20 }
     });
-  }, [api]);
+  });
 
   return (
         <Box sx={

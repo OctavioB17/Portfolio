@@ -8,7 +8,8 @@ declare module '@mui/material/styles' {
     quaternary: Palette['primary'];
     button: {
       main: string;
-      text: string;
+      textPrimary: string;
+      textSecondary: string
     };
     typography: Palette['main']
   }
@@ -18,7 +19,8 @@ declare module '@mui/material/styles' {
     quaternary?: PaletteOptions['primary'];
     button?: {
       main: string;
-      text: string;
+      textPrimary: string;
+      textSecondary: string
     };
     typography?: {
         main: string;

@@ -1,8 +1,10 @@
 import EnterAnimation from './EnterAnimation'
+import Landing from './landing/Landing'
 
 const Home: React.FC = (): JSX.Element => {
   return (
-    <EnterAnimation/>
+    /*<EnterAnimation/>*/
+    <Landing/>
   )
 }
 
