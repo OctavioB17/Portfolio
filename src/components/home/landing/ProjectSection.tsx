@@ -13,7 +13,7 @@ import McFlyEight from '../../../assets/images/McFly/1727808901594.jpg'
 const ProjectSection: React.FC = (): JSX.Element => {
   return (
     <Box sx={{bgcolor: 'primary.main', width: '100vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center', padding: '5vw'}}>
-        <ProjectBox title='McFly' description='All-in-one photography portfolio application where users can upload, edit, and manage all their photos. Advanced photo editing section. Adjust brightness, contrast, saturation, grayscale, rotate, crop images, and apply a variety of filters.' strings={[McFlyTwo, McFlyOne, McFlyThree, McFlyFour, McFlyFive, McFlySix, McFlySeven, McFlyEight]}/>
+        <ProjectBox title='McFly' description='All-in-one photography portfolio application where users can upload, edit, and manage all their photos. Advanced photo editing section. Adjust brightness, contrast, saturation, grayscale, rotate, crop images, and apply a variety of filters.' strings={[McFlyTwo, McFlyOne, McFlyThree, McFlyFour, McFlyFive, McFlySix, McFlySeven, McFlyEight]} projectUrl='/projects/mcfly'/>
     </Box>
   )
 }
