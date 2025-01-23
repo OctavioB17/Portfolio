@@ -1,6 +1,7 @@
 import { ReactElement, } from "react";
 import { MuiStyle } from "../MUI";
 import { SxProps } from "@mui/material";
+import { StringArrayProps } from "../Reusable";
 
 type sectionPhotoDirection = 'Left' | 'Right'
 
@@ -18,3 +19,8 @@ export interface PositionContextType extends Position {
     setPosition: React.Dispatch<React.SetStateAction<DOMRect | null>>;
 }
 
+export interface ProjectBoxProps extends StringArrayProps {
+    title: string,
+    description: string,
+    projectUrl: string
+}

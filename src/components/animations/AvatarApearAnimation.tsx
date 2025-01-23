@@ -8,7 +8,12 @@ import { BooleanStateProps } from '../../interfaces/Reusable';
 const AvatarApearAnimation: React.FC<BooleanStateProps> = ({ setState }) => {
   const { position } = usePosition();
   const [spring, api] = useSpring(() => ({
-    from: { x: 0, y: 0, height: 0, width: 0 },
+    from: {
+      x: window.innerWidth / 2 - (window.innerWidth * 0.2),
+      y: window.innerHeight / 2 - (window.innerWidth * 0.2),
+      height: window.innerWidth * 0.4,
+      width: window.innerWidth * 0.4,
+    },
   }));
 
   useEffect(() => {
@@ -24,9 +29,9 @@ const AvatarApearAnimation: React.FC<BooleanStateProps> = ({ setState }) => {
         api.start({
           to: newPosition,
           config: { tension: 50, friction: 20 },
-          onRest: () => setState(true),
+          onStart: () => setState(true),
         });
-      }, 5000);
+      }, 2000);
 
       return () => clearTimeout(timer);
     }

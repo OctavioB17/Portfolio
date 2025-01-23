@@ -10,7 +10,6 @@ const SectionWithPhoto: React.FC<sectionWithPhotoProps> = ({ imgUrl, children, i
   useEffect(() => {
     if (imgRef.current) {
       const rect = imgRef.current.getBoundingClientRect();
-      console.log(rect)
       setPosition(rect);
     }
   }, [setPosition]);

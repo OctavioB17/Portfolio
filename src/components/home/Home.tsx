@@ -11,7 +11,8 @@ const Home: React.FC = (): JSX.Element => {
   return (
     <PositionProvider>
       <>
-        <EnterAnimation setState={setAnimationStart}/>
+        <EnterAnimation setState={setAnimationStart} state={animationStart}/>
+        <Landing state={animationStart}/>
       </>
     </PositionProvider>
   )

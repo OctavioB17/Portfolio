@@ -1,16 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { animated } from '@react-spring/web';
 import { AvatarApearAnimationProp } from '../../interfaces/animations/Animations';
 
 const OBAvatar: React.FC<AvatarApearAnimationProp> = ({ spring }): JSX.Element => {
   const imgRef = useRef<HTMLImageElement | null>(null);
 
-  useEffect(() => {
-    if (imgRef.current) {
-      const rect = imgRef.current.getBoundingClientRect();
-      console.log('Position of animated.img:', rect);
-    }
-  }, [spring]);
   let animatedStyle = {}
   if (spring) {
     animatedStyle = {
@@ -28,7 +22,7 @@ const OBAvatar: React.FC<AvatarApearAnimationProp> = ({ spring }): JSX.Element =
     <animated.img
       ref={imgRef}
       style={animatedStyle}
-      src="/src/assets/images/Octavio-Bruza.jpg"
+      src="/src/assets/images/Octavio-Bruza.jpga"
       alt="Octavio Bruza"
     />
   );
