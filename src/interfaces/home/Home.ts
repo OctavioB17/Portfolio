@@ -10,3 +10,11 @@ export interface sectionWithPhotoProps extends MuiStyle {
     imgDirection: sectionPhotoDirection
     photoSx: SxProps
 }
+
+export interface Position {
+    position: DOMRect | null
+} 
+export interface PositionContextType extends Position {
+    setPosition: React.Dispatch<React.SetStateAction<DOMRect | null>>;
+}
+

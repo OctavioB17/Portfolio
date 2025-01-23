@@ -1,25 +1,36 @@
-import React from 'react'
-import { sectionWithPhotoProps } from '../../../interfaces/home/Home'
-import { Box } from '@mui/material'
+import React, { useEffect, useRef } from 'react';
+import { sectionWithPhotoProps } from '../../../interfaces/home/Home';
+import { Box } from '@mui/material';
+import { usePosition } from '../../../hooks/usePosition';
 
-const SectionWithPhoto: React.FC<sectionWithPhotoProps> = ({ imgUrl, children, imgDirection, sx, photoSx }): JSX.Element => {
+const SectionWithPhoto: React.FC<sectionWithPhotoProps> = ({ imgUrl, children, imgDirection, sx, photoSx }) => {
+  const { setPosition } = usePosition();
+  const imgRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (imgRef.current) {
+      const rect = imgRef.current.getBoundingClientRect();
+      console.log(rect)
+      setPosition(rect);
+    }
+  }, [setPosition]);
+
   return (
-    <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', ...sx }}>
-        { imgDirection === 'Left' &&
-        <Box>
-            <Box component='img' src={imgUrl}/>
-        </Box>
-        }
-        <Box>
-            {children}
-        </Box>
-        { imgDirection === 'Right' &&
-        <Box>
-            <Box component='img' src={imgUrl} sx={{...photoSx}}/>
-        </Box>
-        }
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: imgDirection === 'Left' ? 'row' : 'row-reverse',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        ...sx,
+      }}
+    >
+      <Box>
+        <Box ref={imgRef} component="img" src={imgUrl} sx={{ ...photoSx}} />
+      </Box> 
+      <Box>{children}</Box>
     </Box>
-  )
-}
+  );
+};
 
-export default SectionWithPhoto
+export default SectionWithPhoto;

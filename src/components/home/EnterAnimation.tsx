@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import TextLayerUp from '../animations/TextLayerUp';
 import AvatarApearAnimation from '../animations/AvatarApearAnimation';
+import { BooleanStateProps } from '../../interfaces/Reusable';
 
-const EnterAnimation: React.FC = (): JSX.Element => {
+const EnterAnimation: React.FC<BooleanStateProps> = ({ setState }): JSX.Element => {
   const [showAvatar, setShowAvatar] = useState(false);
-
   const handleSecondTextAnimationStart = () => {
-    console.log('A')
     setShowAvatar(true);
   };
+
 
   return (
     <Box sx={{ position: 'relative', width: '100%', height: '100vh' }}>
@@ -46,7 +46,7 @@ const EnterAnimation: React.FC = (): JSX.Element => {
         }}
         onAnimationStart={handleSecondTextAnimationStart}
       />
-      {showAvatar && <AvatarApearAnimation />}
+      {showAvatar && <AvatarApearAnimation setState={setState}/>}
     </Box>
   );
 };

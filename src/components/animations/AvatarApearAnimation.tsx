@@ -1,39 +1,50 @@
-import { useSpring } from '@react-spring/web'
-import OBAvatar from '../visual/OBAvatar'
-import { Box } from '@mui/material'
-import { useEffect } from 'react'
-import { useMediaQuery } from 'react-responsive'
+import React, { useEffect } from 'react';
+import { useSpring } from '@react-spring/web';
+import OBAvatar from '../visual/OBAvatar';
+import { Box } from '@mui/material';
+import { usePosition } from '../../hooks/usePosition';
+import { BooleanStateProps } from '../../interfaces/Reusable';
 
-const AvatarApearAnimation = () => {
+const AvatarApearAnimation: React.FC<BooleanStateProps> = ({ setState }) => {
+  const { position } = usePosition();
   const [spring, api] = useSpring(() => ({
-    from: {x: 0, y: 0, height: 0, width: 0}
-  }))
-
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-
-  const screenHeight = isMobile? window.innerHeight * 0.25 : window.innerHeight * 0.5;
-  const screenWidth = isMobile? window.innerWidth * 0.45 : window.innerWidth * 0.25;
+    from: { x: 0, y: 0, height: 0, width: 0 },
+  }));
 
   useEffect(() => {
-    api.start({
-      to: { height: screenHeight, width: screenWidth },
-      config: { tension: 50, friction: 20 }
-    });
-  });
+    if (position && setState) {
+      const newPosition = {
+        x: position.left + window.scrollX,
+        y: position.top + window.scrollY,
+        height: position.height,
+        width: position.width,
+      };
+
+      const timer = setTimeout(() => {
+        api.start({
+          to: newPosition,
+          config: { tension: 50, friction: 20 },
+          onRest: () => setState(true),
+        });
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [position, api, setState]);
 
   return (
-        <Box sx={
-            {
-                minHeight: '100vh', 
-                minWidth: '100vw', 
-                display: 'flex', 
-                justifyContent: 'center', 
-                alignItems: 'center', 
-            }
-        }>
-            <OBAvatar spring={{...spring}}/>
-        </Box>
-  )
-}
+    <Box
+      sx={{
+        minHeight: '100vh',
+        minWidth: '100vw',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <OBAvatar spring={spring} />
+    </Box>
+  );
+};
 
-export default AvatarApearAnimation
+export default AvatarApearAnimation;
