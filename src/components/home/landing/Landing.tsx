@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import { BooleanStateProps } from '../../../interfaces/Reusable';
 import PresentationBanner from './PresentationBanner';
 import ProjectSection from './ProjectSection';
+import Technologies from './Technologies';
 
 const Landing: React.FC<BooleanStateProps> = ({ state }): JSX.Element => {
   const [body, setBody] = useState<JSX.Element | null>(null);
@@ -10,7 +11,10 @@ const Landing: React.FC<BooleanStateProps> = ({ state }): JSX.Element => {
   useEffect(() => {
     if (state) {
       setBody(
-        <ProjectSection/>
+        <>
+          <ProjectSection/>
+          <Technologies/>
+        </>
       );
     } else {
       setBody(null);

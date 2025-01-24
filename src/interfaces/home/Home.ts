@@ -19,8 +19,13 @@ export interface PositionContextType extends Position {
     setPosition: React.Dispatch<React.SetStateAction<DOMRect | null>>;
 }
 
-export interface ProjectBoxProps extends StringArrayProps {
+export interface ProjectBoxProps extends StringArrayProps, ImageSliderProps {
     title: string,
     description: string,
     projectUrl: string
+}
+
+export interface ImageSliderProps extends StringArrayProps {
+    slidesPerView: number,
+    spaceBetween: number
 }
