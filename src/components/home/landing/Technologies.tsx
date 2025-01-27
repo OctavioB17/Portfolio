@@ -1,4 +1,4 @@
-import { Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
+import { Box, List, ListItem, ListItemAvatar, Typography } from '@mui/material'
 import React from 'react'
 import CodeIcon from '../../visual/CodeIcon'
 import { FaReact } from "react-icons/fa";
@@ -38,88 +38,88 @@ const Technologies: React.FC = (): JSX.Element => {
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaReact style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             React
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Proficient in using all the commonly used hooks such as useState, useEffect, useContext, useReducer, and useRef. Experienced in creating custom hooks to encapsulate and reuse logic across multiple components. Building reusable components and managing state effectively to ensure a seamless user experience.."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Proficient in using all the commonly used hooks such as useState, useEffect, useContext, useReducer, and useRef. Experienced in creating custom hooks to encapsulate and reuse logic across multiple components. Building reusable components and managing state effectively to ensure a seamless user experience.. </Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <SiRedux style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Redux
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Utilizing thunk for handling asynchronous actions and side effects in Redux. Skilled in using dispatch to trigger state updates and manage complex state scenarios. Implementing reducers and actions to keep state predictable and maintainable. Ensuring that state management is efficient, scalable, and easy to debug."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Utilizing thunk for handling asynchronous actions and side effects in Redux. Skilled in using dispatch to trigger state updates and manage complex state scenarios. Implementing reducers and actions to keep state predictable and maintainable. Ensuring that state management is efficient, scalable, and easy to debug.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaHtml5 style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             HTML5
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Crafting semantic HTML5 structures that improve accessibility and SEO. Creating responsive designs using media queries, Flexbox, and Grid Layout to ensure optimal viewing experiences across various devices and screen sizes. Utilizing modern HTML features to enhance web application functionality and user experience."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Crafting semantic HTML5 structures that improve accessibility and SEO. Creating responsive designs using media queries, Flexbox, and Grid Layout to ensure optimal viewing experiences across various devices and screen sizes. Utilizing modern HTML features to enhance web application functionality and user experience.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaCss3 style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             CSS3
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Proficient in writing clean, modular, and maintainable CSS. Using advanced CSS techniques like Flexbox and Grid Layout to build complex layouts with ease. Ensuring cross-browser compatibility and performance optimization for smoother user experiences."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Proficient in writing clean, modular, and maintainable CSS. Using advanced CSS techniques like Flexbox and Grid Layout to build complex layouts with ease. Ensuring cross-browser compatibility and performance optimization for smoother user experiences. </Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <IoLogoJavascript style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             JavaScript (ES6+)
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Leveraging modern JavaScript features and best practices for robust and efficient code. Utilizing ES6+ features such as arrow functions, destructuring, spread/rest operators, and async/await for cleaner and more readable code. Ensuring code maintainability and scalability by adhering to industry standards and best practices."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Leveraging modern JavaScript features and best practices for robust and efficient code. Utilizing ES6+ features such as arrow functions, destructuring, spread/rest operators, and async/await for cleaner and more readable code. Ensuring code maintainability and scalability by adhering to industry standards and best practices.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaSass style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             SASS
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Enhancing CSS with features such as variables, nested rules, and mixins for a more efficient and organized styling process. Leveraging SASS to create reusable and scalable stylesheets, reducing code duplication and improving maintainability. Implementing SASS functions and conditionals to manage design tokens and create dynamic styles."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Enhancing CSS with features such as variables, nested rules, and mixins for a more efficient and organized styling process. Leveraging SASS to create reusable and scalable stylesheets, reducing code duplication and improving maintainability. Implementing SASS functions and conditionals to manage design tokens and create dynamic styles. </Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#172c66" fill-rule="evenodd" d="M24 5.601V1.592a.344.344 0 0 0-.514-.298l-2.64 1.508a.688.688 0 0 0-.346.597v4.009c0 .264.285.43.514.298l2.64-1.508A.688.688 0 0 0 24 5.6ZM.515 1.295l7.643 4.383a.688.688 0 0 0 .684 0l7.643-4.383a.344.344 0 0 1 .515.298v12.03c0 .235-.12.453-.319.58l-4.65 2.953 3.11 1.832c.22.13.495.127.713-.009l4.61-2.878a.344.344 0 0 0 .161-.292v-4.085c0-.254.14-.486.362-.606l2.507-1.346a.344.344 0 0 1 .506.303v7.531c0 .244-.13.47-.34.593l-7.834 4.592a.688.688 0 0 1-.71-.009l-5.953-3.681A.344.344 0 0 1 9 18.808v-3.624c0-.115.057-.222.153-.286l4.04-2.694a.688.688 0 0 0 .307-.572v-4.39a.137.137 0 0 0-.208-.117l-4.44 2.664a.688.688 0 0 1-.705.002L3.645 7.123a.138.138 0 0 0-.208.118v7.933a.344.344 0 0 1-.52.295L.5 14.019C.19 13.833 0 13.497 0 13.135V1.593c0-.264.286-.43.515-.298Z" clip-rule="evenodd"/></svg>
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Material-UI
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Building consistent, responsive, and visually appealing user interfaces following Material Design principles. Customizing Material-UI components to match brand guidelines and application requirements. Utilizing theming capabilities to maintain a coherent design language across the application."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Building consistent, responsive, and visually appealing user interfaces following Material Design principles. Customizing Material-UI components to match brand guidelines and application requirements. Utilizing theming capabilities to maintain a coherent design language across the application.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <GiSpring style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             React-spring
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Implementing advanced animations and transitions to enhance user interactions and engagement. Creating fluid and natural animations that improve the overall user experience. Leveraging React-spring's powerful animation primitives to build complex interactive elements and visual effects."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Implementing advanced animations and transitions to enhance user interactions and engagement. Creating fluid and natural animations that improve the overall user experience. Leveraging React-spring's powerful animation primitives to build complex interactive elements and visual effects.</Typography>
                 </ListItemAvatar>
             </ListItem>
         </List>
@@ -137,88 +137,88 @@ const Technologies: React.FC = (): JSX.Element => {
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaNodeJs style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Node.js
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Developing scalable and efficient server-side applications. Following the Model-View-Controller (MVC) architecture to organize and structure code effectively. Designing and implementing APIs that adhere to REST principles, ensuring smooth communication between client and server. Handling asynchronous operations efficiently with Promises and async/await."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Developing scalable and efficient server-side applications. Following the Model-View-Controller (MVC) architecture to organize and structure code effectively. Designing and implementing APIs that adhere to REST principles, ensuring smooth communication between client and server. Handling asynchronous operations efficiently with Promises and async/await.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <SiExpress style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Express.js
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Building fast, unopinionated, and flexible web applications. Handling routing, middleware, and server-side logic with ease. Creating RESTful APIs: Implementing RESTful endpoints with CRUD operations (Create, Read, Update, Delete) to manage resources efficiently. Using middleware to handle authentication, authorization, logging, and error handling seamlessly."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Building fast, unopinionated, and flexible web applications. Handling routing, middleware, and server-side logic with ease. Creating RESTful APIs: Implementing RESTful endpoints with CRUD operations (Create, Read, Update, Delete) to manage resources efficiently. Using middleware to handle authentication, authorization, logging, and error handling seamlessly.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <SiTypescript  style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             TypeScript
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Writing strongly-typed back-end (and front-end too) code to catch errors at compile time and improve code quality. Enhancing maintainability and readability of the server-side codebase by using TypeScript."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Writing strongly-typed back-end (and front-end too) code to catch errors at compile time and improve code quality. Enhancing maintainability and readability of the server-side codebase by using TypeScript.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <CiDatabase style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             SQL
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Managing relational databases with Sequelize ORM for a smooth integration with Node.js. Designing schemas, writing complex queries, joins, and transactions to manage data relationships and integrity."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Managing relational databases with Sequelize ORM for a smooth integration with Node.js. Designing schemas, writing complex queries, joins, and transactions to manage data relationships and integrity.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <SiJsonwebtokens style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             JWT (JSON Web Tokens)
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Implementing secure authentication mechanisms. Ensuring proper authorization to protect sensitive resources and operations."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Implementing secure authentication mechanisms. Ensuring proper authorization to protect sensitive resources and operations.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaAws style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Infrastructure with AWS
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Utilizing AWS services such as S3, EC2, VPC, and Route 53 for robust cloud infrastructure. Managing networks, domains, and routing to ensure high availability and scalability."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Utilizing AWS services such as S3, EC2, VPC, and Route 53 for robust cloud infrastructure. Managing networks, domains, and routing to ensure high availability and scalability.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaDocker style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Docker
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Containerizing applications for consistent environments across development, testing, and production. Automating deployment processes with Docker to ensure smooth CI/CD workflows."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Containerizing applications for consistent environments across development, testing, and production. Automating deployment processes with Docker to ensure smooth CI/CD workflows.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: '1vw'}}>
                         <FaLinux style={{fontSize: '2vw'}} />
-                        <Typography variant='h5'>
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Linux
                         </Typography>
                     </Box>
-                    <ListItemText sx={{width: '70vw'}} secondary="Hosting servers and databases on Linux for enhanced security and performance. Managing server configurations, deployments, and maintenance tasks efficiently."/>
+                    <Typography variant='h6' sx={{width: '70vw', color: '#484848'}}>Hosting servers and databases on Linux for enhanced security and performance. Managing server configurations, deployments, and maintenance tasks efficiently.</Typography>
                 </ListItemAvatar>
             </ListItem>
         </List>

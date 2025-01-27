@@ -4,6 +4,8 @@ import { BooleanStateProps } from '../../../interfaces/Reusable';
 import PresentationBanner from './PresentationBanner';
 import ProjectSection from './ProjectSection';
 import Technologies from './Technologies';
+import WorkAndStudies from './WorkAndStudies';
+import Footer from '../../Footer';
 
 const Landing: React.FC<BooleanStateProps> = ({ state }): JSX.Element => {
   const [body, setBody] = useState<JSX.Element | null>(null);
@@ -14,6 +16,8 @@ const Landing: React.FC<BooleanStateProps> = ({ state }): JSX.Element => {
         <>
           <ProjectSection/>
           <Technologies/>
+          <WorkAndStudies/>
+          <Footer/>
         </>
       );
     } else {

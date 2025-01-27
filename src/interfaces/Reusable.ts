@@ -16,3 +16,7 @@ export interface BooleanStateProps {
 export interface StringArrayProps {
     strings: string[]
 }
+
+export interface ModalProps extends BooleanStateProps {
+    children: React.FC | React.ReactNode
+}

@@ -6,8 +6,7 @@ import Landing from './landing/Landing'
 const Home: React.FC = (): JSX.Element => {
 
   const [animationStart, setAnimationStart] = useState<boolean>(false)
-  console.log(animationStart)
-
+  
   return (
     <PositionProvider>
       <>

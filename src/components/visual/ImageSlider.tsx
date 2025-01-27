@@ -16,7 +16,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ strings, spaceBetween, slides
     >
       {strings.map((photo: string, index: number) => (
         <SwiperSlide key={index}>
-          <Box component='img' src={photo} sx={{ width: '50vw', height: '20vw' }} alt={`Slide ${index}`} />
+          <Box component='img' src={photo} sx={{ width: '40vw', height: '19vw', objectFit: 'contain' }} alt={`Slide ${index}`} />
         </SwiperSlide>
       ))}
     </Swiper>

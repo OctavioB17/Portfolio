@@ -29,3 +29,12 @@ export interface ImageSliderProps extends StringArrayProps {
     slidesPerView: number,
     spaceBetween: number
 }
+
+export interface ExperienceBoxProps {
+    institution: string,
+    title?: string,
+    date: string,
+    description: string,
+    photo: string,
+    certificate?: React.FC | React.ReactNode
+}
