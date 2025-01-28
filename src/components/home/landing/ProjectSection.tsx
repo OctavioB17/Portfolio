@@ -14,8 +14,11 @@ import CulzoniTwo from '../../../assets/images/Projects/Culzoni/Grabación-2025-
 import CulzoniThree from '../../../assets/images/Projects/Culzoni/Grabación-2025-01-24-124821.gif'
 import CulzoniFour from '../../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125339.gif'
 import CulzoniFive from '../../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125448.gif'
+import { useNavigate } from 'react-router-dom'
 
 const ProjectSection: React.FC = (): JSX.Element => {
+  const navigate = useNavigate();
+
   return (
     <Box sx={{width: '100vw', bgcolor: 'primary.main', padding: '5vw', paddingTop: '3vw', display: 'flex', flexDirection: 'column', gap: '3vw' }}>
       <Typography variant='h2' sx={{color: 'button.main', fontWeight: '600', textDecoration: 'underline', display: 'inline'}}>
@@ -30,7 +33,7 @@ const ProjectSection: React.FC = (): JSX.Element => {
         </ImageList>
       </Box>
       <Box sx={{width: '100%', display: 'flex', justifyContent: 'end', padding: '1vw'}}>
-        <Button variant='outlined' sx={{color: 'button.textPrimary', textTransform: 'none', fontWeight: 600, fontSize: '1vw'}}>View all my projects...</Button>
+        <Button onClick={() => navigate('projects')} variant='outlined' sx={{color: 'button.textPrimary', textTransform: 'none', fontWeight: 600, fontSize: '1vw'}}>View all my projects...</Button>
       </Box>
     </Box>
   )

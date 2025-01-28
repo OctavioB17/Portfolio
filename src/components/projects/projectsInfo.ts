@@ -1,0 +1,14 @@
+import { projectInfo } from "../../interfaces/projects/Projects";
+import McFlyOne from '../../assets/images/Projects/McFly/Grabación 2025-01-24 110048.gif'
+import McFlyTwo from '../../assets/images/Projects/McFly/Grabación 2025-01-24 110205.gif'
+import McFlyThree from '../../assets/images/Projects/McFly/Grabación 2025-01-24 111236.gif'
+import McFlyFour from '../../assets/images/Projects/McFly/Grabación 2025-01-24 111413.gif'
+
+export const mcfly: projectInfo = {
+    title: "McFly",
+    description: "At McFly, we crafted a portfolio-style website for one of my clients, designed to showcase professional photographs and facilitate their editing, uploading, and management. The application is user-friendly and visually appealing, featuring a neo-brutalist design with bold yet harmonious colors. Intuitive Photo Display: The primary function of McFly is to display photos in a friendly and innovative manner. Photos are presented as if they were Polaroids, complete with titles and descriptions. The homepage features a compilation of all uploaded photos in a masonry layout that preserves the original dimensions of each photo. Admin Panel: The application includes a comprehensive admin panel with multiple functionalities: Photo Information Table: This table displays detailed information about each photo and provides options to perform actions such as deleting photos. Photo Upload Panel: This intuitive panel allows users to upload photos by simply dragging and dropping them, then adding a title and description. Once uploaded, the photos are instantly reflected on the homepage. Photo Editing Panel: One of the most unique features is the photo editing panel, which is customized to allow clients to edit their photos before uploading them. This panel includes options for cropping, adjusting intensities, grayscale conversion, saturation, hue adjustments, highlighting colors, rotating, and applying filters. After editing, clients can download the edited photos and then upload them to the portfolio. With these features, McFly becomes an all-in-one portfolio solution that allows users to edit photos, upload them, and manage them seamlessly. The project was built with a robust back-end using Node.jswith Express, and Sequelize ORM for SQL database management. The front-end was developed with the React framework, ensuring a smooth and interactive user experience. The entire infrastructure is hosted on AWS, leveraging cloud services for scalability and reliability. Through McFly, we have provided a comprehensive platform for photographers to showcase their work, streamline their workflow, and enhance their online presence with a visually stunning and functionally rich portfolio.",
+    photosUrl: [McFlyOne, McFlyTwo, McFlyThree, McFlyFour],
+    technologies: ["JavaScript", "Node.JS", "React.JS", "MySQL", "Amazon Web Services"],
+    projectUrl: "http://mcflyfrontbucket.s3-website-us-east-1.amazonaws.com/",
+    gitHubUrl: "Not public"
+}
