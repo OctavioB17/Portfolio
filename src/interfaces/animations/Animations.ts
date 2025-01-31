@@ -16,3 +16,6 @@ export interface AvatarApearAnimationProp extends CSSStyles {
         width: SpringValue<number>;
     }
 }
+export interface AnimatedWrapperProps {
+  children: React.ReactNode;
+}

@@ -1,7 +1,7 @@
 import { ReactElement, } from "react";
 import { MuiStyle } from "../MUI";
 import { SxProps } from "@mui/material";
-import { StringArrayProps } from "../Reusable";
+import { BooleanStateProps, StringArrayProps } from "../Reusable";
 
 type sectionPhotoDirection = 'Left' | 'Right'
 
@@ -20,9 +20,15 @@ export interface PositionContextType extends Position {
 }
 
 export interface ProjectBoxProps extends StringArrayProps, ImageSliderProps {
-    title: string,
-    description: string,
-    projectUrl: string
+    title?: string,
+    description?: string,
+    projectUrl?: string,
+    sx?: SxProps
+}
+
+export interface EnterAnimationProps extends BooleanStateProps {
+    stateFinishAnimation?: boolean;
+    setStateFinishAnimation?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface ImageSliderProps extends StringArrayProps {

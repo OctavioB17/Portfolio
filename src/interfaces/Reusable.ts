@@ -11,7 +11,7 @@ export interface ComponentWithChildren {
 export interface BooleanStateProps {
     state?: boolean;
     setState?: React.Dispatch<React.SetStateAction<boolean>>;
-  }
+  } 
 
 export interface StringArrayProps {
     strings: string[]

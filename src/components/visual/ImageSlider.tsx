@@ -5,7 +5,6 @@ import { Box } from '@mui/material';
 import { ImageSliderProps } from '../../interfaces/home/Home';
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ strings, spaceBetween, slidesPerView }): JSX.Element => {
-  console.log(slidesPerView)
   return (
     <Swiper
       spaceBetween={spaceBetween}

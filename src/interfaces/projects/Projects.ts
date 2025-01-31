@@ -1,6 +1,6 @@
 export interface projectInfo {
     title: string
-    description: string
+    description: React.FC
     photosUrl: string[]
     technologies: string[]
     projectUrl: string

@@ -14,9 +14,9 @@ const TextLayerUp: React.FC<TextLayerUpProps> = ({ node, style, onAnimationStart
       config: { tension: 50, friction: 20 },
       onStart: () => {
         if (onAnimationStart) {
-            onAnimationStart()
+          onAnimationStart();
         }
-      }
+      },
     });
   };
 

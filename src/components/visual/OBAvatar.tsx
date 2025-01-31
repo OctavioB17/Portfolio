@@ -22,7 +22,7 @@ const OBAvatar: React.FC<AvatarApearAnimationProp> = ({ spring }): JSX.Element =
     <animated.img
       ref={imgRef}
       style={animatedStyle}
-      src="/src/assets/images/Octavio-Bruza.jpga"
+      src="/src/assets/images/Octavio-Bruza.jpg"
       alt="Octavio Bruza"
     />
   );

@@ -3,12 +3,51 @@ import McFlyOne from '../../assets/images/Projects/McFly/Grabación 2025-01-24 1
 import McFlyTwo from '../../assets/images/Projects/McFly/Grabación 2025-01-24 110205.gif'
 import McFlyThree from '../../assets/images/Projects/McFly/Grabación 2025-01-24 111236.gif'
 import McFlyFour from '../../assets/images/Projects/McFly/Grabación 2025-01-24 111413.gif'
+import McFlyDetails from "./McFlyDetails";
+import EReduxOne from '../../assets/images/Projects/ERedux/1701862669755.gif'
+import EReduxTwo from '../../assets/images/Projects/ERedux/1701862737080.gif'
+import EReduxThree from '../../assets/images/Projects/ERedux/1701862760832.gif'
+import EReduxFour from '../../assets/images/Projects/ERedux/1701862760832.gif'
+import CulzoniOne from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-124334.gif'
+import CulzoniTwo from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-124555.gif'
+import CulzoniThree from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-124821.gif'
+import CulzoniFour from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125339.gif'
+import CulzoniFive from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125448.gif'
+import CulzoniDigitalDetails from "./CulzoniDigitalDetails";
+import EReduxDetails from "./EReduxDetails";
 
 export const mcfly: projectInfo = {
     title: "McFly",
-    description: "At McFly, we crafted a portfolio-style website for one of my clients, designed to showcase professional photographs and facilitate their editing, uploading, and management. The application is user-friendly and visually appealing, featuring a neo-brutalist design with bold yet harmonious colors. Intuitive Photo Display: The primary function of McFly is to display photos in a friendly and innovative manner. Photos are presented as if they were Polaroids, complete with titles and descriptions. The homepage features a compilation of all uploaded photos in a masonry layout that preserves the original dimensions of each photo. Admin Panel: The application includes a comprehensive admin panel with multiple functionalities: Photo Information Table: This table displays detailed information about each photo and provides options to perform actions such as deleting photos. Photo Upload Panel: This intuitive panel allows users to upload photos by simply dragging and dropping them, then adding a title and description. Once uploaded, the photos are instantly reflected on the homepage. Photo Editing Panel: One of the most unique features is the photo editing panel, which is customized to allow clients to edit their photos before uploading them. This panel includes options for cropping, adjusting intensities, grayscale conversion, saturation, hue adjustments, highlighting colors, rotating, and applying filters. After editing, clients can download the edited photos and then upload them to the portfolio. With these features, McFly becomes an all-in-one portfolio solution that allows users to edit photos, upload them, and manage them seamlessly. The project was built with a robust back-end using Node.jswith Express, and Sequelize ORM for SQL database management. The front-end was developed with the React framework, ensuring a smooth and interactive user experience. The entire infrastructure is hosted on AWS, leveraging cloud services for scalability and reliability. Through McFly, we have provided a comprehensive platform for photographers to showcase their work, streamline their workflow, and enhance their online presence with a visually stunning and functionally rich portfolio.",
+    description: McFlyDetails,
     photosUrl: [McFlyOne, McFlyTwo, McFlyThree, McFlyFour],
-    technologies: ["JavaScript", "Node.JS", "React.JS", "MySQL", "Amazon Web Services"],
+    technologies: ["HTML5", "CSS3", "JavaScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "MySQL", "Docker", "Amazon Web Services", "Linux"],
     projectUrl: "http://mcflyfrontbucket.s3-website-us-east-1.amazonaws.com/",
     gitHubUrl: "Not public"
+}
+
+export const culzoniDigital: projectInfo = {
+    title: "Culzoni Digital",
+    description: CulzoniDigitalDetails,
+    photosUrl: [CulzoniOne, CulzoniTwo, CulzoniThree, CulzoniFour, CulzoniFive],
+    technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "MySQL", "Docker", "Amazon Web Services", "Linux"],
+    projectUrl: "https://culzonidigital.site",
+    gitHubUrl: "Not public"
+}
+
+export const eredux: projectInfo = {
+    title: "E-Redux",
+    description: EReduxDetails,
+    photosUrl: [EReduxOne, EReduxTwo, EReduxThree, EReduxFour],
+    technologies: ["HTML5", "CSS3", "JavaScript", "React.JS", "Redux", "Amazon Web Services"],
+    projectUrl: "http://ereduxbruzaoctavio.s3-website-us-east-1.amazonaws.com",
+    gitHubUrl: "Not public"
+}
+
+export const portfolio: projectInfo = {
+    title: "",
+    description: "",
+    photosUrl: [],
+    technologies: [],
+    projectUrl: "",
+    gitHubUrl: ""
 }
