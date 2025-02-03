@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import HomeWithAnimations from './HomeWithAnimations'; // Componente con animaciones
-import Home from './Home'; // Componente normal
+import HomeWithAnimations from './HomeWithAnimations';
+import Home from './Home';
 
 const FirstVisitHandler: React.FC = () => {
   const [hasVisited, setHasVisited] = useState<boolean | null>(null);

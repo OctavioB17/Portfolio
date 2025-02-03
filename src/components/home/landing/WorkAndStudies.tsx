@@ -6,18 +6,18 @@ import Studies from './WorkAndStudies/Studies'
 const WorkAndStudies: React.FC = (): JSX.Element => {
   return (
     <Box sx={{width: '100vw', bgcolor: 'primary.main',  padding: '5vw', paddingBottom: '10vw'}}>
-      <Typography sx={{textDecoration: 'underline', color: 'button.main'}}>
-        <Typography variant='h2' sx={{fontWeight: 800, color: 'typography.main'}}>
+      <Typography variant='h2' sx={{textDecoration: 'underline', color: 'button.main'}}>
+        <span style={{fontWeight: 800, color: '#172c66', display: 'inline'}}>
           Work experience
-        </Typography>
+        </span>
       </Typography>
       <Box sx={{ padding: '3vw' }}>
         <Work/>
       </Box>
-      <Typography sx={{textDecoration: 'underline', color: 'button.main'}}>
-        <Typography variant='h2' sx={{fontWeight: 800, color: 'typography.main'}}>
+      <Typography variant='h2' sx={{textDecoration: 'underline', color: 'button.main'}}>
+        <span style={{fontWeight: 800, color: '#172c66', display: 'inline'}}>
           Studies
-        </Typography>
+        </span>
       </Typography>
       <Box sx={{ padding: '3vw' }}>
         <Studies/>

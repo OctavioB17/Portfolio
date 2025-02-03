@@ -27,6 +27,9 @@ const Footer: React.FC = (): JSX.Element => {
         <Typography>
             Portfolio by Octavio Bruza. Powered by myself
         </Typography>
+        <Typography>
+            Color scheme from <Link href="https://www.happyhues.co/palettes/17" sx={{color: 'typography.main', textDecoration: 'underline'}}>Happy Hues</Link> by Mackenzie Child.
+        </Typography>
     </Box>
   )
 }

@@ -51,7 +51,7 @@ const ProjectInfoPage: React.FC = (): JSX.Element => {
                 <List sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', padding: '1vw', gap: '1vw', color: 'typography.main' }}>
                   {
                     projectSelected.technologies.map((technology, index) => (
-                      <Box sx={{display: 'flex', alignItems: 'center'}}>
+                      <Box key={index} sx={{display: 'flex', alignItems: 'center'}}>
                         <ListItemIcon sx={{display: 'flex', justifyContent: 'center'}}>
                           {technologiesIcon[technology] ? React.createElement(technologiesIcon[technology], { style: { fontSize: '2vw', color: '#172c66' } }) : null}
                         </ListItemIcon>

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { animated } from '@react-spring/web';
 import { AvatarApearAnimationProp } from '../../interfaces/animations/Animations';
 
-const OBAvatar: React.FC<AvatarApearAnimationProp> = ({ spring }): JSX.Element => {
+const OBAvatar: React.FC<AvatarApearAnimationProp> = React.memo(({ spring }): JSX.Element => {
   const imgRef = useRef<HTMLImageElement | null>(null);
 
   let animatedStyle = {}
@@ -26,6 +26,6 @@ const OBAvatar: React.FC<AvatarApearAnimationProp> = ({ spring }): JSX.Element =
       alt="Octavio Bruza"
     />
   );
-};
+});
 
 export default OBAvatar;

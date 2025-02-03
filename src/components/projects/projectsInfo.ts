@@ -13,8 +13,12 @@ import CulzoniTwo from '../../assets/images/Projects/Culzoni/Grabación-2025-01-
 import CulzoniThree from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-124821.gif'
 import CulzoniFour from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125339.gif'
 import CulzoniFive from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125448.gif'
+import PortfolioOne from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 091328.gif'
+import PortfolioTwo from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 092129.gif'
+import PortfolioThree from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 092226.gif'
 import CulzoniDigitalDetails from "./CulzoniDigitalDetails";
 import EReduxDetails from "./EReduxDetails";
+import PortfolioDetails from "./PortfolioDetails";
 
 export const mcfly: projectInfo = {
     title: "McFly",
@@ -44,10 +48,10 @@ export const eredux: projectInfo = {
 }
 
 export const portfolio: projectInfo = {
-    title: "",
-    description: "",
-    photosUrl: [],
-    technologies: [],
+    title: "Portfolio",
+    description: PortfolioDetails,
+    photosUrl: [PortfolioOne, PortfolioTwo, PortfolioThree],
+    technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.JS", "React-Spring", "Amazon Web Services"],
     projectUrl: "",
-    gitHubUrl: ""
+    gitHubUrl: "https://github.com/OctavioB17/Portfolio"
 }

@@ -12,7 +12,7 @@ const Landing: React.FC = (): JSX.Element => {
   return (
     <AnimatedWrapper>
       <Box sx={{ display: 'flex', flexDirection: 'column', position: 'absolute', overflowX: 'hidden' }}>
-        <PresentationBanner />
+        <PresentationBanner/>
         <ProjectSection/>
         <Technologies/>
         <WorkAndStudies/>

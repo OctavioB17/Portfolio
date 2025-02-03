@@ -13,16 +13,16 @@ const ExperiencesBox: React.FC<ExperienceBoxProps> = ({ institution: title, titl
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
         <Box>
-          <Typography sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main' }}>
-            <Typography variant='h4' sx={{ fontWeight: '800', color: 'quaternary.main' }}>
+          <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main' }}>
+            <span style={{fontWeight: 800, color: '#172c66', display: 'inline'}}>
               {title}
-            </Typography>
-            <Typography variant='h4' sx={{ fontWeight: '700', color: 'quaternary.main' }}>
+            </span>
+            <span style={{fontWeight: 700, color: '#172c66', display: 'inline'}}>
               {job}
-            </Typography>
-            <Typography variant='h4' sx={{ fontWeight: '700', color: 'quaternary.main' }}>
+            </span>
+            <span style={{fontWeight: 700, color: '#172c66', display: 'inline'}}>
               {date}
-            </Typography>
+            </span>
           </Typography>
         </Box>
         <Typography sx={{ textWrap: 'wrap', fontSize: '1vw' }}>

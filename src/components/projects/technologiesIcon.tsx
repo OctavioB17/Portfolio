@@ -24,6 +24,6 @@ export const technologiesIcon: { [key: string]: IconType } = {
     "Docker": FaDocker,
     "Json Web Token": SiJsonwebtokens,
     "Linux": FaLinux,
-    "React-spring": GiSpring,
+    "React-Spring": GiSpring,
     "TypeScript": SiTypescript
 };
