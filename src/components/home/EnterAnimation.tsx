@@ -24,7 +24,20 @@ const EnterAnimation: React.FC<BooleanStateProps> = ({ setState, state }): JSX.E
     <Box sx={boxStyleRef.current}>
       <TextLayerUp
         node={
-          <Typography sx={{ fontWeight: 700, fontSize: '2vw' }}>
+          <Typography
+              sx={{
+                fontWeight: 700,
+                textAlign: 'center',
+                fontSize: {
+                  xs: '6vw', 
+                  sm: '3vw',  
+                  md: '2vw',
+                },
+                padding: {
+                  xs: '1vw'
+                }
+              }}
+            >
             Hey, my name's Octavio Bruza. I'm a FullStack Javascript Developer
           </Typography>
         }

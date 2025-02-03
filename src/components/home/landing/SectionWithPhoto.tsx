@@ -3,7 +3,7 @@ import { sectionWithPhotoProps } from '../../../interfaces/home/Home';
 import { Box } from '@mui/material';
 import { usePosition } from '../../../hooks/usePosition';
 
-const SectionWithPhoto: React.FC<sectionWithPhotoProps> = ({ imgUrl, children, imgDirection, sx, photoSx }) => {
+const SectionWithPhoto: React.FC<sectionWithPhotoProps> = ({ imgUrl, children, sx, photoSx }) => {
   const { setPosition } = usePosition();
   const imgRef = useRef<HTMLDivElement | null>(null);
 
@@ -18,7 +18,7 @@ const SectionWithPhoto: React.FC<sectionWithPhotoProps> = ({ imgUrl, children, i
     <Box
       sx={{
         display: 'flex',
-        flexDirection: imgDirection === 'Left' ? 'row' : 'row-reverse',
+        flexDirection: 'row-reverse',
         justifyContent: 'space-around',
         alignItems: 'center',
         ...sx,

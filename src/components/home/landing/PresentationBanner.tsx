@@ -10,7 +10,7 @@ const PresentationBanner: React.FC<BooleanStateProps> = (): JSX.Element => {
   const date: string = moment('20231101', "YYYYMMDD").fromNow()
 
   return (
-    <SectionWithPhoto imgUrl={'/src/assets/images/Octavio-Bruza.jpg'} imgDirection='Right' photoSx={{borderRadius: '100%', width: '30vw'}} sx={{width: '100vw', height: '100vh', backgroundColor: 'secondary.main', padding: '2.5vw', gap: '1vw'}}>
+    <SectionWithPhoto imgUrl={'/src/assets/images/Octavio-Bruza.jpg'} photoSx={{borderRadius: '100%', width: '30vw'}} sx={{width: '100vw', height: '100vh', backgroundColor: 'secondary.main', padding: '2.5vw', gap: '1vw'}}>
       <NormalBox sx={{ padding: '2vw', backgroundColor: 'primary.main', borderRadius: '10px', flexDirection: 'column', gap: '1vw', }}>
         <Box>
           <Box sx={{ width: '100%' }}>

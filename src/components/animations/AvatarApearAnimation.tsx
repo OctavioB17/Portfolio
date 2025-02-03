@@ -13,6 +13,7 @@ const AvatarApearAnimation: React.FC<BooleanStateProps> = ({ setState }) => {
       y: window.innerHeight / 2 - (window.innerWidth * 0.2),
       height: window.innerWidth * 0.4,
       width: window.innerWidth * 0.4,
+      zIndex: -1
     },
   }));
 
@@ -23,6 +24,7 @@ const AvatarApearAnimation: React.FC<BooleanStateProps> = ({ setState }) => {
         y: position.top + window.scrollY,
         height: position.height,
         width: position.width,
+        zIndex: -1
       };
 
       const timer = setTimeout(() => {
@@ -45,6 +47,7 @@ const AvatarApearAnimation: React.FC<BooleanStateProps> = ({ setState }) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        zIndex: -1
       }}
     >
       <OBAvatar spring={spring} />

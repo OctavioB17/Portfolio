@@ -3,12 +3,9 @@ import { MuiStyle } from "../MUI";
 import { SxProps } from "@mui/material";
 import { BooleanStateProps, StringArrayProps } from "../Reusable";
 
-type sectionPhotoDirection = 'Left' | 'Right'
-
 export interface sectionWithPhotoProps extends MuiStyle {
     imgUrl: string;
-    children: ReactElement
-    imgDirection: sectionPhotoDirection
+    children?: ReactElement
     photoSx: SxProps
 }
 
