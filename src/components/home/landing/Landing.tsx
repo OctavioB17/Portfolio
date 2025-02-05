@@ -10,7 +10,7 @@ import PresentationBannerPhone from '../../phone/PresentationBannerPhone';
 
 const Landing: React.FC = (): JSX.Element => {
 
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const isSmallScreen = useMediaQuery('(max-width:1200px)');
 
   return (
     <AnimatedWrapper>

@@ -1,4 +1,4 @@
-import { ReactElement, } from "react";
+import { CSSProperties, ReactElement, } from "react";
 import { MuiStyle } from "../MUI";
 import { SxProps } from "@mui/material";
 import { BooleanStateProps, StringArrayProps } from "../Reusable";
@@ -30,14 +30,15 @@ export interface EnterAnimationProps extends BooleanStateProps {
 
 export interface ImageSliderProps extends StringArrayProps {
     slidesPerView: number,
-    spaceBetween: number
+    spaceBetween: number,
+    photoStyle?: CSSProperties
 }
 
 export interface ExperienceBoxProps {
     institution: string,
     title?: string,
     date: string,
-    description: string,
+    description: ReactElement | string,
     photo: string,
     certificate?: React.FC | React.ReactNode
 }

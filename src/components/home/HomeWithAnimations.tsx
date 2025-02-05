@@ -7,7 +7,7 @@ import EnterAnimationPhone from '../phone/EnterAnimationPhone'
 const Home: React.FC = (): JSX.Element => {
 
   const [animationStart, setAnimationStart] = useState<boolean>(false)
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const isSmallScreen = useMediaQuery('(max-width:1200px)');
 
   return (
     <PositionProvider>
