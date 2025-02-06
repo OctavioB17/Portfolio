@@ -1,18 +1,20 @@
 import React from 'react';
-import { Box, Typography, List, ListItem, Divider } from '@mui/material';
+import { Box, Typography, List, ListItem, Divider, useMediaQuery } from '@mui/material';
 
 const EReduxDetails: React.FC = (): JSX.Element => {
+  const isSmallScreen = useMediaQuery('(max-width:1200px)');
+
   return (
     <Box>
-      <Typography sx={{ marginBottom: '2vw', fontSize: '1.2vw' }}>
+      <Typography sx={{ marginBottom: '2vw', fontSize: isSmallScreen ? '5vw' : '1.2vw' }}>
         E-Redux is one of my projects that I developed to practice and master Redux. This application is a simple e-commerce platform where users can simulate a purchase and add items to a shopping cart, which is the main attraction. The data loading and display across pages that are not directly connected occur through Redux and Redux Thunk, providing a modern and secure way to transmit information on the Front-End.
       </Typography>
 
-      <Typography sx={{ marginBottom: '2vw', fontSize: '1.2vw' }}>
+      <Typography sx={{ marginBottom: '2vw', fontSize: isSmallScreen ? '5vw' : '1.2vw' }}>
         The visual aspect and components in React are powered by Material-UI, which provided me with a quick and easy way to build the interface and its functionality. This project allowed me to delve deep into state management with Redux and enhance my skills in creating responsive and interactive web applications.
       </Typography>
 
-      <Typography variant='h3' sx={{ marginBottom: '2vw', fontWeight: 600}}>
+      <Typography variant='h3' sx={{ marginBottom: '2vw', fontWeight: 600, fontSize: isSmallScreen ? '9vw' : '1.5vw' }}>
         Key Features:
       </Typography>
 
@@ -47,7 +49,7 @@ const EReduxDetails: React.FC = (): JSX.Element => {
 
       <Divider sx={{ margin: '2vw 0' }} />
 
-      <Typography variant="h3" sx={{ fontWeight: 'bold', marginBottom: '1vw' }}>
+      <Typography variant="h3" sx={{ fontWeight: 'bold', marginBottom: '1vw', fontSize: isSmallScreen ? '7vw' : '1.5vw' }}>
         Technical Implementation:
       </Typography>
       <List>
@@ -79,7 +81,7 @@ const EReduxDetails: React.FC = (): JSX.Element => {
         </ListItem>
       </List>
 
-      <Typography sx={{ marginTop: '2vw', fontSize: '1.2vw' }}>
+      <Typography sx={{ marginTop: '2vw', fontSize: isSmallScreen ? '5vw' : '1.2vw' }}>
         Through E-Redux, I was able to create a functional and engaging e-commerce application while honing my skills in state management and front-end development.
       </Typography>
     </Box>

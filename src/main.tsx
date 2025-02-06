@@ -7,7 +7,7 @@ import { themeOptions } from './themes/Themes.ts';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectLanding from './components/projects/ProjectLanding.tsx';
 import './App.css'
-import ProjectInfoPage from './components/projects/ProjectInfoPage.tsx';
+import ProjectInfoPageViewHandler from './components/projects/ProjectInfoPageViewHandler.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="*" element={<App />} />
           <Route path='/projects' element={<ProjectLanding/>}/>
-          <Route path='/projects/*' element={<ProjectInfoPage/>}/>
+          <Route path='/projects/*' element={<ProjectInfoPageViewHandler/>}/>
         </Routes>
       </Router>
     </ThemeProvider>

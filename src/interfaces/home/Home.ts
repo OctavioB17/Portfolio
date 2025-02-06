@@ -20,7 +20,7 @@ export interface ProjectBoxProps extends StringArrayProps, ImageSliderProps {
     title?: string,
     description?: string,
     projectUrl?: string,
-    sx?: SxProps
+    sx?: SxProps,
 }
 
 export interface EnterAnimationProps extends BooleanStateProps {

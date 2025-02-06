@@ -30,7 +30,7 @@ const ProjectInfoPage: React.FC = (): JSX.Element => {
       <Box sx={{ width: '100vw', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', bgcolor: 'secondary.main', fontFamily: 'Proxima-Nova' }}>
         {projectSelected ? (
           <Box sx={{display: 'flex', padding: '5vw', gap: '3vw'}}>
-            <Box sx={{bgcolor: 'primary.main', width: '50vw', borderRadius: '10px', padding: '2vw', gap: '1vw', display: 'flex', flexDirection: 'column'}}>
+            <Box sx={{bgcolor: 'primary.main', width: '50vw', borderRadius: '10px', padding: '2vw', gap: '1vw', display: 'flex', flexDirection: 'column', }}>
               <Typography variant='h2' sx={{ fontWeight: '600', color: 'typography.main' }}>
                   <span style={{ textDecoration: 'underline', textDecorationColor: '#f582ae' }}>
                       {projectSelected.title}
@@ -41,7 +41,7 @@ const ProjectInfoPage: React.FC = (): JSX.Element => {
               </Box>
             </Box>
             <Box sx={{ width: '40vw', borderRadius: '10px', display: 'flex', flexDirection: 'column', gap: '2vw', justifyContent: 'space-between' }}>
-              <ProjectBox strings={projectSelected.photosUrl} slidesPerView={1} spaceBetween={50} sx={{bgcolor: 'primary.main', maxHeight: '21vw'}}/>
+              <ProjectBox strings={projectSelected.photosUrl} slidesPerView={1} spaceBetween={50} sx={{bgcolor: 'primary.main', maxHeight: '21vw'}} photoStyle={{width: '100%'}}/>
               <Box sx={{ width: '40vw', bgcolor: 'primary.main', display: 'flex', flexDirection: 'column', padding: '1vw', borderRadius: '10px' }}>
                 <Typography variant='h3' sx={{textDecoration: 'underline', color: 'typography.main', fontWeight: 600}}>
                   <span style={{ textDecoration: 'underline', textDecorationColor: '#f582ae' }}>
@@ -64,7 +64,7 @@ const ProjectInfoPage: React.FC = (): JSX.Element => {
                 </List>
               </Box>
               <Box sx={{color: 'typography.main', bgcolor: 'primary.main', padding: '1vw', borderRadius: '10px'}}>
-                <Typography variant='h4'>
+                <Typography variant='h4' sx={{fontWeight: 800}}>
                   URL:
                 </Typography>
                 <Link href={projectSelected.projectUrl} sx={{color: 'typography.main'}}>
@@ -74,7 +74,7 @@ const ProjectInfoPage: React.FC = (): JSX.Element => {
                 </Link>
               </Box>
               <Box sx={{color: 'typography.main', bgcolor: 'primary.main', padding: '1vw', borderRadius: '10px'}}>
-                <Typography variant='h4'>
+                <Typography variant='h4' sx={{fontWeight: 800}}>
                   GitHub URL:
                 </Typography>
                   {
