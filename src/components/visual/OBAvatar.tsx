@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { animated } from '@react-spring/web';
 import { AvatarApearAnimationProp } from '../../interfaces/animations/Animations';
+import  OctavioBruza from '../../assets/images/Octavio-Bruza.jpg'
 
 const OBAvatar: React.FC<AvatarApearAnimationProp> = React.memo(({ spring }): JSX.Element => {
   const imgRef = useRef<HTMLImageElement | null>(null);
@@ -22,7 +23,7 @@ const OBAvatar: React.FC<AvatarApearAnimationProp> = React.memo(({ spring }): JS
     <animated.img
       ref={imgRef}
       style={animatedStyle}
-      src="/src/assets/images/Octavio-Bruza.jpg"
+      src={OctavioBruza}
       alt="Octavio Bruza"
     />
   );

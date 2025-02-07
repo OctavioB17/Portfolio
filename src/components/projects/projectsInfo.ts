@@ -52,6 +52,6 @@ export const portfolio: projectInfo = {
     description: PortfolioDetails,
     photosUrl: [PortfolioOne, PortfolioTwo, PortfolioThree],
     technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.JS", "React-Spring", "Amazon Web Services"],
-    projectUrl: "",
+    projectUrl: "https://octaviobruza.com",
     gitHubUrl: "https://github.com/OctavioB17/Portfolio"
 }
