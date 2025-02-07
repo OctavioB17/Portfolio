@@ -20,7 +20,7 @@ const Studies: React.FC = (): JSX.Element => {
   const renderDescription = () => {
     return (
       <Box sx={{ padding: '2vw' }}>
-        <Typography variant="body1" sx={{ marginBottom: '1vw' }}>
+        <Box sx={{ marginBottom: '1vw' }}>
           {dhDescription.split('. ').map((sentence, index) => (
             <Box key={index}>
               <Typography variant="body1" sx={{ marginBottom: '0.5vw' }}>
@@ -29,7 +29,7 @@ const Studies: React.FC = (): JSX.Element => {
               <Divider sx={{ margin: '1vw 0' }} />
             </Box>
           ))}
-        </Typography>
+        </Box>
       </Box>
     );
   };

@@ -12,22 +12,30 @@ const ExperiencesBox: React.FC<ExperienceBoxProps> = ({ institution: title, titl
         <Box component='img' src={photo} sx={{ width: '15vw' }} />
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
-        <Box>
-          <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main' }}>
-            <span style={{fontWeight: 800, color: '#172c66', display: 'inline'}}>
-              {title}
-            </span>
-            <span style={{fontWeight: 700, color: '#172c66', display: 'inline'}}>
-              {job}
-            </span>
-            <span style={{fontWeight: 700, color: '#172c66', display: 'inline'}}>
-              {date}
-            </span>
-          </Typography>
+        <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
+          <Box sx={{display: 'flex', flexDirection: 'column'}}>
+            <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main', alignItems: 'center' }}>
+              <span  style={{fontWeight: 800, color: '#172c66', display: 'inline', fontSize: '3vw'}}>
+                {title}
+              </span>
+            </Typography>
+            <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main', alignItems: 'center' }}>
+              <span style={{fontWeight: 700, color: '#172c66', display: 'block', fontSize: '2vw'}}>
+                {job}
+              </span>
+            </Typography>
+          </Box>
+          <Box sx={{alignContent: 'start'}}>
+            <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main', alignItems: 'center' }}>
+              <span style={{fontWeight: 700, color: '#172c66', display: 'inline'}}>
+                {date}
+              </span>
+            </Typography>
+          </Box>
         </Box>
-        <Typography sx={{ textWrap: 'wrap', fontSize: '1vw' }}>
+        <Box sx={{ textWrap: 'wrap', fontSize: '1.2vw' }}>
           {description}
-        </Typography>
+        </Box>
         {
           certificate &&
           <Box sx={{ display: 'flex', justifyContent: 'end' }}>

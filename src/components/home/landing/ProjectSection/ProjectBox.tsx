@@ -17,9 +17,9 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ strings, title, description, pr
             <Box>
                 <ImageSlider photoStyle={{...photoStyle}} strings={strings} slidesPerView={slidesPerView} spaceBetween={spaceBetween}/>
             </Box>        
-            <Box sx={{padding: isSmallScreen ? '' : '1vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', gap: isSmallScreen ? '' : '1vw'}}>
+            <Box sx={{padding: isSmallScreen ? '4vw' : '1vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', gap: isSmallScreen ? '3vw' : '1vw'}}>
               <Box>
-                <Typography variant='h3' sx={{fontWeight: '800', width: isSmallScreen ? '100%' : '', color: 'typography.main'}}>{title}</Typography>
+                <Typography variant='h3' sx={{fontWeight: '800', width: '100%', color: 'typography.main'}}>{title}</Typography>
                 <Typography sx={{fontWeight: '600', fontSize: isSmallScreen ? '5vw' : '1vw', color: 'typography.main'}}>{description}</Typography>
               </Box>
                 {

@@ -12,7 +12,7 @@ const Work: React.FC = (): JSX.Element => {
   const renderDescription = () => {
     return (
       <Box sx={{ padding: '2vw' }}>
-        <Typography variant="body1" sx={{ marginBottom: '1vw' }}>
+        <Box sx={{ marginBottom: '1vw' }}>
           {culzoniDescription.split('. ').map((sentence, index) => (
             <Box key={index}>
               <Typography variant="body1" sx={{ marginBottom: '0.5vw' }}>
@@ -21,7 +21,7 @@ const Work: React.FC = (): JSX.Element => {
               <Divider sx={{ margin: '1vw 0' }} />
             </Box>
           ))}
-        </Typography>
+        </Box>
       </Box>
     );
   };
@@ -32,7 +32,7 @@ const Work: React.FC = (): JSX.Element => {
         <ExperiencesBoxPhone
           photo={Culzoni}
           institution='Culzoni'
-          title='Full-stack JS Developer - Digital Marketing'
+          title='Full-stack JS Developer'
           date='09/12/2023 - Now'
           description={renderDescription()}
         />
@@ -40,7 +40,7 @@ const Work: React.FC = (): JSX.Element => {
         <ExperiencesBox
           photo={Culzoni}
           institution='Culzoni'
-          title='Full-stack JS Developer - Digital Marketing'
+          title='Full-stack JS Developer'
           date='09/12/2023 - Now'
           description={culzoniDescription}
         />

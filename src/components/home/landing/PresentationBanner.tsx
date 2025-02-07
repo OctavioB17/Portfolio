@@ -1,6 +1,6 @@
 import SectionWithPhoto from './SectionWithPhoto'
 import NormalBox from '../../visual/NormalBox'
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Link, Typography } from '@mui/material'
 import moment from 'moment'
 
 import { BooleanStateProps } from '../../../interfaces/Reusable'
@@ -23,7 +23,9 @@ const PresentationBanner: React.FC<BooleanStateProps> = (): JSX.Element => {
                 I am a passionate and dedicated Developer with extensive experience. Working in the industry since {date}. My expertise spans across FrontEnd development using React, BackEnd development with Node.js, and infrastructure management on Amazon Web Services. I am proficient in database technologies such as MySQL. With a strong focus on JavaScript web development, I specialize in creating dynamic, user-friendly applications that solve real-world problems.
             </Typography>
             <Box sx={{display: 'flex', gap: '1vw'}}>
-                <Button variant='contained' sx={{ bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '1.5vw', textTransform: 'none', fontWeight: 700 }}>View full CV</Button>
+                <Link target='_blank' href='https://portfolio-bruza.s3.us-east-1.amazonaws.com/CV/Octavio+Bruza.pdf'>
+                    <Button variant='contained' sx={{ bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '1.5vw', textTransform: 'none', fontWeight: 700 }}>View full CV</Button>
+                </Link>
                 <Button variant='contained' sx={{ bgcolor: 'terciary.main', color: 'button.textSecondary', fontSize: '1.5vw', textTransform: 'none', fontWeight: 700 }}>View all my projects</Button>
             </Box>
           </Box>

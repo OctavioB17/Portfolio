@@ -14,8 +14,8 @@ const ExperiencesBox: React.FC<ExperienceBoxProps> = ({ institution: title, titl
           {title}
         </span>
       </Typography>
-      <Box sx={{ bgcolor: 'primary.main', borderRadius: '10px', display: 'flex', alignItems: 'center', paddingBottom: '30vw', paddingTop: '25vw'}}>
-        <Box component='img' src={photo} sx={{ width: '85vw' }} />
+      <Box sx={{ bgcolor: 'primary.main', borderRadius: '10px', display: 'flex', alignItems: 'center', padding: '1vw', paddingBottom: '25vw', paddingTop: '25vw',}}>
+        <Box component='img' src={photo} sx={{ width: '100%' }} />
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
         <Box>
@@ -28,9 +28,9 @@ const ExperiencesBox: React.FC<ExperienceBoxProps> = ({ institution: title, titl
             </span>
           </Typography>
         </Box>
-        <Typography sx={{ textWrap: 'wrap', fontSize: '5vw' }}>
+        <Box sx={{ textWrap: 'wrap', fontSize: '5vw' }}>
           {description}
-        </Typography>
+        </Box>
         {
           certificate &&
           <Box sx={{ display: 'flex', justifyContent: 'end' }}>

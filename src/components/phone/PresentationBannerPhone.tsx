@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Link, Typography } from '@mui/material'
 import moment from 'moment'
 import { BooleanStateProps } from '../../interfaces/Reusable'
 import SectionWithPhoto from '../home/landing/SectionWithPhoto'
@@ -85,7 +85,9 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             </Box>
           </Box>
           <Box sx={{display: 'flex', gap: '5vw', alignItems: 'center', justifyContent: 'center', height: '10vh', position: 'relative', top: '-16.5vw' }}>
-            <Button onClick={() => navigate('/projects')} variant='contained' sx={{ bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '5vw', textTransform: 'none', fontWeight: 800, width: '45vw', height: '7vh' }}>View full CV</Button>
+            <Link target='_blank' href='https://portfolio-bruza.s3.us-east-1.amazonaws.com/CV/Octavio+Bruza.pdf'>
+              <Button variant='contained' sx={{ bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '5vw', textTransform: 'none', fontWeight: 800, width: '45vw', height: '7vh' }}>View full CV</Button>
+            </Link>
             <Button onClick={() => navigate('/projects')} variant='contained' sx={{ bgcolor: 'terciary.main', color: 'button.textSecondary', fontSize: '5vw', textTransform: 'none', fontWeight: 800, width: '45vw', height: '7vh' }}>View projects</Button>
           </Box>
         </Box>
