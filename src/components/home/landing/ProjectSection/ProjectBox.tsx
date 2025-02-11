@@ -21,7 +21,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ strings, title, description, pr
               <Box>
                 <Typography variant='h3' sx={{fontWeight: '800', width: '100%', color: 'typography.main'}}>{title}</Typography>
                 <Typography sx={{fontWeight: '600', fontSize: isSmallScreen ? '5vw' : '1vw', color: 'typography.main'}}>{description}</Typography>
-              </Box>
+              </Box>  
                 {
                   projectUrl &&
                   <Box sx={{alignItems: isSmallScreen ? 'end' : 'start', display: 'flex', justifyContent: isSmallScreen ? 'end' : 'start'}}>

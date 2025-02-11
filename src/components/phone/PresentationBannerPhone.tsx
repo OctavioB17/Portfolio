@@ -24,7 +24,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
               Hey! <span style={{ fontWeight: '800', fontSize: '3.5rem', color: '#172c66', textDecoration: 'underline', textDecorationColor: '#f582ae' }}>FullStack Developer</span> here.
             </Typography>
           </Box>
-          <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{width: '101vw', borderTopLeftRadius: '50%', borderTopRightRadius: '50%'}} sx={{backgroundColor: 'secondary.main', padding: '2.5vw', gap: '1vw', display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
+          <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{width: '101vw', height: '101vw', borderTopLeftRadius: '50%', borderTopRightRadius: '50%'}} sx={{backgroundColor: 'secondary.main', display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
           <Box sx={{boxShadow: '0px -3px 10px 0px rgba(0, 0, 0, 0.75)', height: '5vw', width: '100vw', position: 'relative', top: '-28vw'}}/>
           <Box sx={{display: 'flex', flexDirection: 'column', gap: '2vw', bgcolor: 'secondary.main', position: 'relative', top: '-33vw', zIndex: 5}}>
             <Box sx={{display: 'flex', alignItems: 'end', paddingLeft: '3vw'}}>  

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Box } from '@mui/material';
+import { Box, CircularProgress } from '@mui/material';
 import { ImageSliderProps } from '../../interfaces/home/Home';
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ strings, spaceBetween, slidesPerView, photoStyle }): JSX.Element => {
@@ -15,7 +15,15 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ strings, spaceBetween, slides
     >
       {strings.map((photo: string, index: number) => (
         <SwiperSlide key={index}>
-          <Box component='img' src={photo} sx={{ ...photoStyle }} alt={`Slide ${index}`} />
+          {
+            photo
+            ?
+            <Box component='img' src={photo} sx={{ ...photoStyle }} alt={`Slide ${index}`} />
+            :
+            <Box sx={{...photoStyle, display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
+              <CircularProgress color="inherit" />
+            </Box>
+          }
         </SwiperSlide>
       ))}
     </Swiper>

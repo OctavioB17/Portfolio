@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Link, Typography } from '@mui/material'
 import moment from 'moment'
 import { animated, useSpring } from '@react-spring/web'
 import { useEffect } from 'react'
@@ -45,7 +45,7 @@ const PresentationBanner: React.FC<BooleanStateProps> = ({ state }): JSX.Element
               Hey! <span style={{ fontWeight: '800', fontSize: '3.5rem', color: '#172c66', textDecoration: 'underline', textDecorationColor: '#f582ae' }}>FullStack Developer</span> here.
             </Typography>
           </Box>
-          <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{width: '101vw', borderTopLeftRadius: '50%', borderTopRightRadius: '50%'}} sx={{backgroundColor: 'secondary.main', padding: '2.5vw', gap: '1vw', display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
+          <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{width: '101vw', height: '101vw', borderTopLeftRadius: '50%', borderTopRightRadius: '50%'}} sx={{backgroundColor: 'secondary.main', display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
           <Box sx={{boxShadow: '0px -3px 10px 0px rgba(0, 0, 0, 0.75)', height: '5vw', width: '100vw', position: 'relative', top: '-28vw'}}/>
           <Box sx={{display: 'flex', flexDirection: 'column', gap: '2vw', bgcolor: 'secondary.main', position: 'relative', top: '-33vw', zIndex: 5}}>
             <Box sx={{display: 'flex', alignItems: 'end', paddingLeft: '3vw'}}>  
@@ -106,7 +106,9 @@ const PresentationBanner: React.FC<BooleanStateProps> = ({ state }): JSX.Element
             </Box>
           </Box>
           <Box sx={{display: 'flex', gap: '5vw', alignItems: 'center', justifyContent: 'center', height: '10vh', position: 'relative', top: '-16.5vw' }}>
-            <Button onClick={() => navigate('/projects')} variant='contained' sx={{ bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '5vw', textTransform: 'none', fontWeight: 800, width: '45vw', height: '7vh' }}>View full CV</Button>
+            <Link target='_blank' href='https://portfolio-bruza.s3.us-east-1.amazonaws.com/CV/Octavio+Bruza.pdf'>
+              <Button variant='contained' sx={{ bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '5vw', textTransform: 'none', fontWeight: 800, width: '45vw', height: '7vh' }}>View full CV</Button>
+            </Link>
             <Button onClick={() => navigate('/projects')} variant='contained' sx={{ bgcolor: 'terciary.main', color: 'button.textSecondary', fontSize: '5vw', textTransform: 'none', fontWeight: 800, width: '45vw', height: '7vh' }}>View projects</Button>
           </Box>
         </Box>

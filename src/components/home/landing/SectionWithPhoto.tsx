@@ -24,8 +24,8 @@ const SectionWithPhoto: React.FC<sectionWithPhotoProps> = ({ imgUrl, children, s
         ...sx,
       }}
     >
-      <Box>
-        <Box ref={imgRef} component="img" src={imgUrl} sx={{ ...photoSx}} />
+      <Box ref={imgRef} sx={{...photoSx}}>
+        <Box component="img" src={imgUrl} sx={{ ...photoSx}} />
       </Box> 
       <Box>{children}</Box>
     </Box>

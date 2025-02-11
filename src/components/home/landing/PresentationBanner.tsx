@@ -5,13 +5,14 @@ import moment from 'moment'
 import OctavioBruza from '../../../assets/images/Octavio-Bruza.jpg'
 
 import { BooleanStateProps } from '../../../interfaces/Reusable'
+import { useNavigate } from 'react-router-dom'
 const PresentationBanner: React.FC<BooleanStateProps> = (): JSX.Element => {
-
+  const navigate = useNavigate()
 
   const date: string = moment('20231101', "YYYYMMDD").fromNow()
 
   return (
-    <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{borderRadius: '100%', width: '30vw'}} sx={{width: '100vw', height: '100vh', backgroundColor: 'secondary.main', padding: '2.5vw', gap: '1vw'}}>
+    <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{borderRadius: '100%', width: '30vw', height: '30vw'}} sx={{width: '100vw', height: '100vh', backgroundColor: 'secondary.main', padding: '2.5vw', gap: '1vw'}}>
       <NormalBox sx={{ padding: '2vw', backgroundColor: 'primary.main', borderRadius: '10px', flexDirection: 'column', gap: '1vw', }}>
         <Box>
           <Box sx={{ width: '100%' }}>
@@ -27,7 +28,7 @@ const PresentationBanner: React.FC<BooleanStateProps> = (): JSX.Element => {
                 <Link target='_blank' href='https://portfolio-bruza.s3.us-east-1.amazonaws.com/CV/Octavio+Bruza.pdf'>
                     <Button variant='contained' sx={{ bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '1.5vw', textTransform: 'none', fontWeight: 700 }}>View full CV</Button>
                 </Link>
-                <Button variant='contained' sx={{ bgcolor: 'terciary.main', color: 'button.textSecondary', fontSize: '1.5vw', textTransform: 'none', fontWeight: 700 }}>View all my projects</Button>
+                <Button onClick={() => {navigate('/projects')}} variant='contained' sx={{ bgcolor: 'terciary.main', color: 'button.textSecondary', fontSize: '1.5vw', textTransform: 'none', fontWeight: 700 }}>View all my projects</Button>
             </Box>
           </Box>
         </Box>

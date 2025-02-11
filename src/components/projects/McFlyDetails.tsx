@@ -74,11 +74,11 @@ const McFlyDetails: React.FC = (): JSX.Element => {
       <Typography variant="h4" sx={{ fontWeight: 'bold', marginBottom: '3vw' }}>
         Technical Implementation:
       </Typography>
-      <Typography variant="body1" sx={{ fontSize: '5vw' }}>
+      <Typography variant="body1" sx={{ fontSize: isSmallScreen ? '5vw' : '1.2vw' }}>
         The project was built with a robust back-end using Node.js with Express, and Sequelize ORM for SQL database management. The front-end was developed with the React framework, ensuring a smooth and interactive user experience. The entire infrastructure is hosted on AWS, leveraging cloud services for scalability and reliability.
       </Typography>
 
-      <Typography variant="body1" sx={{ marginTop: '2vw', fontSize: '5vw' }}>
+      <Typography variant="body1" sx={{ fontSize: isSmallScreen ? '5vw' : '1.2vw' }}>
         Through McFly, we have provided a comprehensive platform for photographers to showcase their work, streamline their workflow, and enhance their online presence with a visually stunning and functionally rich portfolio.
       </Typography>
     </Box>
