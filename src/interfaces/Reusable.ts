@@ -18,5 +18,6 @@ export interface StringArrayProps {
 }
 
 export interface ModalProps extends BooleanStateProps {
-    children: React.FC | React.ReactNode
+    children: React.FC | React.ReactNode,
+    title?: string
 }

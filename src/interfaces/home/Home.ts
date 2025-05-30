@@ -40,5 +40,8 @@ export interface ExperienceBoxProps {
     date: string,
     description: ReactElement | string,
     photo: string,
-    certificate?: React.FC | React.ReactNode
+    certificates?: Array<{
+        image: React.FC,
+        title?: string
+    }>
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { ModalProps } from '../../interfaces/Reusable';
 import Modal from '@mui/material/Modal';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-const CustomModal: React.FC<ModalProps> = ({ children, state, setState }): JSX.Element => {
+const CustomModal: React.FC<ModalProps> = ({ children, state, setState, title }): JSX.Element => {
   return (
     <Modal
       open={state || false}
@@ -11,7 +11,20 @@ const CustomModal: React.FC<ModalProps> = ({ children, state, setState }): JSX.E
       sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}
     >
       <Box sx={{ padding: '2vw', bgcolor: 'secondary.main', outline: 'none', borderRadius: '10px' }}>
-      {typeof children === 'function' ? children({}) : children}
+        {title && (
+          <Typography 
+            variant="h5" 
+            sx={{ 
+              marginBottom: '1vw', 
+              color: 'primary.contrastText',
+              fontWeight: 'bold',
+              textAlign: 'left'
+            }}
+          >
+            {title}
+          </Typography>
+        )}
+        {typeof children === 'function' ? children({}) : children}
       </Box>
     </Modal>
   );
