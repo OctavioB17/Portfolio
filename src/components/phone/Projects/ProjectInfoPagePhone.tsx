@@ -5,7 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { Link as LinkRouterDom } from 'react-router-dom'
 import AppearWrapper from '../../animations/AppearWrapper';
 import ProjectBox from '../../home/landing/ProjectSection/ProjectBox';
-import { mcfly, eredux, culzoniDigital, portfolio } from '../../projects/projectsInfo';
+import { mcfly, eredux, culzoniDigital, portfolio, mariaPinina } from '../../projects/projectsInfo';
 import { technologiesIcon } from '../../projects/technologiesIcon';
 import Grid from '@mui/material/Grid2'  ;
 
@@ -15,6 +15,7 @@ const projects = {
   eredux: eredux,
   culzoniDigital: culzoniDigital,
   portfolio: portfolio,
+  mariaPinina: mariaPinina,
 };
 
 const ProjectInfoPagePhone: React.FC = (): JSX.Element => {

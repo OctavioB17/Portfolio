@@ -1,7 +1,7 @@
 import { Box, Link, List, ListItem, ListItemIcon, Typography } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { mcfly, eredux, culzoniDigital, portfolio } from '../projects/projectsInfo';
+import { mcfly, eredux, culzoniDigital, portfolio, mariaPinina } from '../projects/projectsInfo';
 import ProjectBox from '../home/landing/ProjectSection/ProjectBox';
 import { technologiesIcon } from './technologiesIcon';
 import AppearWrapper from '../animations/AppearWrapper';
@@ -14,6 +14,7 @@ const projects = {
   eredux: eredux,
   culzoniDigital: culzoniDigital,
   portfolio: portfolio,
+  mariaPinina: mariaPinina,
 };
 
 const ProjectInfoPage: React.FC = (): JSX.Element => {

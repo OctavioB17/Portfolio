@@ -3,6 +3,8 @@ import { GrMysql } from "react-icons/gr";
 import { SiRedux, SiExpress, SiJsonwebtokens, SiTypescript } from "react-icons/si";
 import { GiSpring } from "react-icons/gi";
 import { IconType } from "react-icons";
+import { BiLogoPostgresql } from "react-icons/bi";
+
 
 const MaterialUI = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
@@ -15,6 +17,7 @@ export const technologiesIcon: { [key: string]: IconType } = {
     "React.JS": FaReact,
     "Node.JS": FaNodeJs,
     "MySQL": GrMysql,
+    "PostgreSQL": BiLogoPostgresql,
     "Redux": SiRedux,
     "Material-UI": MaterialUI,
     "HTML5": FaHtml5,

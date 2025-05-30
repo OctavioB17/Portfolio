@@ -16,9 +16,13 @@ import CulzoniFive from '../../assets/images/Projects/Culzoni/Grabación-2025-01
 import PortfolioOne from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 091328.gif'
 import PortfolioTwo from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 092129.gif'
 import PortfolioThree from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 092226.gif'
+import MariaPininaOne from '../../assets/images/Projects/MariaPinina/Grabación 2025-05-30 144116.gif'
+import MariaPininaTwo from '../../assets/images/Projects/MariaPinina/Captura de pantalla 2025-05-30 143836.png'
+import MariaPininaThree from '../../assets/images/Projects/MariaPinina/Captura de pantalla 2025-05-30 144334.png'
 import CulzoniDigitalDetails from "./CulzoniDigitalDetails";
 import EReduxDetails from "./EReduxDetails";
 import PortfolioDetails from "./PortfolioDetails";
+import MariaPininaDetails from "./MariaPininaDetails";
 
 export const mcfly: projectInfo = {
     title: "McFly",
@@ -54,4 +58,13 @@ export const portfolio: projectInfo = {
     technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.JS", "React-Spring", "Amazon Web Services"],
     projectUrl: "https://octaviobruza.com",
     gitHubUrl: "https://github.com/OctavioB17/Portfolio"
+}
+
+export const mariaPinina: projectInfo = {
+    title: "Maria Pinina",
+    description: MariaPininaDetails,
+    photosUrl: [MariaPininaOne, MariaPininaTwo, MariaPininaThree],
+    technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "PostgreSQL", "Docker", "Amazon Web Services", "Linux"],
+    projectUrl: "http://maria-pinina-front.s3-website-us-east-1.amazonaws.com/",
+    gitHubUrl: "https://github.com/OctavioB17/MariaPininaBackend"
 }
