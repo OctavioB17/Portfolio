@@ -2,7 +2,7 @@ import { Box, List, ListItem, ListItemAvatar, Typography, useMediaQuery } from '
 import React from 'react'
 import CodeIcon from '../../visual/CodeIcon'
 import { FaReact } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
+import { SiNestjs, SiRedux } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -17,6 +17,7 @@ import { FaAws } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
 import SettingsIcon from '@mui/icons-material/Settings';
+import { RiNextjsFill } from 'react-icons/ri';
 
 const Technologies: React.FC = (): JSX.Element => {
 
@@ -45,6 +46,17 @@ const Technologies: React.FC = (): JSX.Element => {
                         </Typography>
                     </Box>
                     <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Proficient in using all the commonly used hooks such as useState, useEffect, useContext, useReducer, and useRef. Experienced in creating custom hooks to encapsulate and reuse logic across multiple components. Building reusable components and managing state effectively to ensure a seamless user experience.. </Typography>
+                </ListItemAvatar>
+            </ListItem>
+            <ListItem>
+                <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
+                    <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '3vw' : '1vw'}}>
+                        <RiNextjsFill style={{fontSize: isSmallScreen ? '2.3rem' : '2vw'}} />
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
+                            NextJS
+                        </Typography>
+                    </Box>
+                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Utilizing NextJS for building server-side rendered and statically generated applications. Skilled in using NextJS's routing system to create a seamless user experience. Implementing NextJS's API routes to create a robust backend. Ensuring that the application is efficient, scalable, and easy to debug.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>
@@ -126,6 +138,8 @@ const Technologies: React.FC = (): JSX.Element => {
             </ListItem>
         </List>
       </Box>
+
+
       <Box sx={{display: 'flex', flexDirection: 'column', gap: '1vw', paddingLeft: '3vw', paddingRight: '5vw'}}>
         <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '5vw' : '2vw'}}>
             <SettingsIcon style={{ fontSize: isSmallScreen ? '15vw' : '2.2vw' }}/>
@@ -143,7 +157,18 @@ const Technologies: React.FC = (): JSX.Element => {
                             Node.js
                         </Typography>
                     </Box>
-                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Developing scalable and efficient server-side applications. Following the Model-View-Controller (MVC) architecture to organize and structure code effectively. Designing and implementing APIs that adhere to REST principles, ensuring smooth communication between client and server. Handling asynchronous operations efficiently with Promises and async/await.</Typography>
+                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Developing scalable and efficient server-side applications. Following the Model-View-Controller (MVC) or Clean architecture to organize and structure code effectively. Designing and implementing APIs that adhere to REST principles, ensuring smooth communication between client and server. Handling asynchronous operations efficiently with Promises and async/await.</Typography>
+                </ListItemAvatar>
+            </ListItem>
+            <ListItem>
+                <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
+                    <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '3vw' : '1vw'}}>
+                        <SiNestjs style={{fontSize: isSmallScreen ? '2.3rem' : '2vw'}} />
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
+                            NestJS
+                        </Typography>
+                    </Box>
+                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Building scalable and efficient server-side applications using NestJS. Utilizing NestJS's modular architecture to create a robust and maintainable backend. Implementing NestJS's dependency injection system to manage dependencies and improve code reusability. Ensuring that the application is efficient and scalable.</Typography>
                 </ListItemAvatar>
             </ListItem>
             <ListItem>

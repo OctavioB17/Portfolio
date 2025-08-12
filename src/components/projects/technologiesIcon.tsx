@@ -4,6 +4,8 @@ import { SiRedux, SiExpress, SiJsonwebtokens, SiTypescript } from "react-icons/s
 import { GiSpring } from "react-icons/gi";
 import { IconType } from "react-icons";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { SiNestjs } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 
 
 const MaterialUI = () => (
@@ -28,5 +30,7 @@ export const technologiesIcon: { [key: string]: IconType } = {
     "Json Web Token": SiJsonwebtokens,
     "Linux": FaLinux,
     "React-Spring": GiSpring,
-    "TypeScript": SiTypescript
+    "TypeScript": SiTypescript,
+    "NestJS": SiNestjs,
+    "NextJS": RiNextjsFill
 };
