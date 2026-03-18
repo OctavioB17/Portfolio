@@ -5,7 +5,8 @@ import { CSSStyles } from "../Reusable";
 export interface TextLayerUpProps {
   node: ReactNode;
   style: CSSProperties;
-  onAnimationStart?: () => void; 
+  onAnimationStart?: () => void;
+  isActive?: boolean;
 }
 
 export interface AvatarApearAnimationProp extends CSSStyles {

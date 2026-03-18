@@ -19,7 +19,11 @@ const CulzoniDigitalDetails: React.FC = (): JSX.Element => {
       </Typography>
 
       <Typography sx={{ marginBottom: '2vw', fontSize: isSmallScreen ? '5vw' : '1.2vw' }}>
-        Additionally, the system includes an extensive table to view all Mercado Libre listings, allowing users to change any details, from system codes to prices and stock. This application (at least its first version) was developed in four months using technologies such as React, TypeScript, Node.js, Express.js, MySQL, AWS (EC2, S3, networking services like Route 53 and DNS), Docker, JWT, and Material-UI.
+        Additionally, the system includes an extensive table to view all Mercado Libre listings, allowing users to change any details, from system codes to prices and stock. This application (at least its first version) was developed in four months using technologies such as React, TypeScript, Node.js, Express.js,  Java, Spring Boot,  MySQL, AWS (EC2, S3, networking services like Route 53 and DNS), Docker, JWT, and Material-UI.
+      </Typography>
+
+      <Typography sx={{ marginBottom: '2vw', fontSize: isSmallScreen ? '5vw' : '1.2vw' }}>
+        The system architecture combines Java with Spring Boot for enterprise-level tasks such as stock management, invoicing, pricing, image manipulation, and PDF processing. This robust backend handles complex business logic and data processing efficiently. Express.js is integrated alongside to provide high-performance services including real-time socket notifications linked with Mercado Libre APIs, dashboard data processing, and high-speed API requests. This hybrid approach ensures optimal performance for both enterprise operations and real-time communication needs.
       </Typography>
 
       <Typography variant="h4" sx={{ fontWeight: 'bold', marginBottom: '1vw' }}>

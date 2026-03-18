@@ -46,7 +46,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', paddingLeft: '3vw'}}>
               <ChatBubble position='left'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                    My expertise spans across FrontEnd development using React
+                    My expertise spans across FrontEnd development using React/Next.js
                 </Typography>
               </ChatBubble>
               <FaCode style={{fontSize: '3rem'}}/>
@@ -54,7 +54,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', flexDirection: 'row-reverse', justifyContent: 'space-around'}}>
               <ChatBubble position='right'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                    BackEnd development with Node.js
+                    BackEnd development with Node.js/Java
                 </Typography>
               </ChatBubble>
               <LuBinary style={{fontSize: '3rem'}}/>

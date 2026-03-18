@@ -18,6 +18,10 @@ import { FaDocker } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
 import SettingsIcon from '@mui/icons-material/Settings';
 import { RiNextjsFill } from 'react-icons/ri';
+import { FaJava } from "react-icons/fa";
+import { SiSpring } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Technologies: React.FC = (): JSX.Element => {
 
@@ -152,6 +156,28 @@ const Technologies: React.FC = (): JSX.Element => {
             <ListItem>
                 <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '3vw' : '1vw'}}>
+                        <FaJava style={{fontSize: isSmallScreen ? '2.3rem' : '2vw'}} />
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
+                            Java
+                        </Typography>
+                    </Box>
+                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Building enterprise-grade applications with Java, focusing on object-oriented programming principles and design patterns. Implementing robust backend services for business logic including stock management, invoicing systems, and data processing. Utilizing Java's strong typing system and extensive ecosystem for creating maintainable and scalable applications. Working with Java collections, streams, and concurrency features to handle high-performance operations. Following SOLID principles and implementing design patterns like Singleton, Factory, Observer, and Strategy to create clean, modular code architecture.</Typography>
+                </ListItemAvatar>
+            </ListItem>
+            <ListItem>
+                <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
+                    <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '3vw' : '1vw'}}>
+                        <SiSpring style={{fontSize: isSmallScreen ? '2.3rem' : '2vw'}} />
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
+                            Spring Boot
+                        </Typography>
+                    </Box>
+                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Building enterprise-grade applications with Spring Boot, leveraging its auto-configuration and convention-over-configuration approach. Implementing robust backend services for business logic including stock management, invoicing systems, and data processing. Utilizing Spring Security for authentication and authorization, Spring Data JPA for database operations, and Spring Web for RESTful API development. Following SOLID principles and design patterns to create maintainable and scalable applications with minimal boilerplate code.</Typography>
+                </ListItemAvatar>
+            </ListItem>
+            <ListItem>
+                <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
+                    <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '3vw' : '1vw'}}>
                         <FaNodeJs style={{fontSize: isSmallScreen ? '2.3rem' : '2vw'}} />
                         <Typography variant='h4' sx={{textDecoration: 'underline'}}>
                             Node.js
@@ -246,6 +272,28 @@ const Technologies: React.FC = (): JSX.Element => {
                         </Typography>
                     </Box>
                     <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Hosting servers and databases on Linux for enhanced security and performance. Managing server configurations, deployments, and maintenance tasks efficiently.</Typography>
+                </ListItemAvatar>
+            </ListItem>
+            <ListItem>
+                <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
+                    <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '3vw' : '1vw'}}>
+                        <FaGitAlt style={{fontSize: isSmallScreen ? '2.3rem' : '2vw'}} />
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
+                            Git
+                        </Typography>
+                    </Box>
+                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Managing version control for collaborative development using Git. Implementing branching strategies, merge workflows, and conflict resolution. Utilizing Git hooks for automated quality checks and deployment processes. Following Git best practices for commit messages, code reviews, and repository organization to maintain clean project history and efficient collaboration.</Typography>
+                </ListItemAvatar>
+            </ListItem>
+            <ListItem>
+                <ListItemAvatar sx={{display: 'flex', flexDirection: 'column', gap: '0.5vw'}}>
+                    <Box sx={{display: 'flex', alignItems: 'center', gap: isSmallScreen ? '3vw' : '1vw'}}>
+                        <FaGithub style={{fontSize: isSmallScreen ? '2.3rem' : '2vw'}} />
+                        <Typography variant='h4' sx={{textDecoration: 'underline'}}>
+                            GitHub
+                        </Typography>
+                    </Box>
+                    <Typography variant='h6' sx={{width: isSmallScreen ? '90vw' : '70vw', color: '#484848'}}>Leveraging GitHub for project hosting, collaboration, and CI/CD workflows. Implementing GitHub Actions for automated testing, building, and deployment pipelines. Managing pull requests, code reviews, and issue tracking for efficient project management. Utilizing GitHub's project management tools, branch protection rules, and automated security scanning to ensure code quality and project security.</Typography>
                 </ListItemAvatar>
             </ListItem>
         </List>

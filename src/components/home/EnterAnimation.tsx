@@ -11,12 +11,27 @@ const EnterAnimation: React.FC<BooleanStateProps> = ({ setState, state }): JSX.E
     setShowAvatar(true);
   };
 
-  const boxStyleRef = useRef<CSSProperties>({ position: 'relative', width: '100%', height: '100vh' });
+  const boxStyleRef = useRef<CSSProperties>({ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' });
+  
+  // Bloquear scroll durante las animaciones
+  useEffect(() => {
+    if (!state) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    // Cleanup al desmontar el componente
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [state]);
+
   useEffect(() => {
     if (state) {
       boxStyleRef.current = { ...boxStyleRef.current, display: 'none' };
     } else {
-      boxStyleRef.current = { position: 'relative', width: '100%', height: '100vh' };
+      boxStyleRef.current = { position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' };
     }
   }, [state]);
 
@@ -38,17 +53,18 @@ const EnterAnimation: React.FC<BooleanStateProps> = ({ setState, state }): JSX.E
                 }
               }}
             >
-            Hey, my name's Octavio Bruza. I'm a FullStack Javascript Developer
+            Hey, my name's Octavio Bruza. I'm a FullStack Developer
           </Typography>
         }
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
-          minHeight: '100vh',
-          minWidth: '100vw',
+          height: '100vh',
+          width: '100vw',
           zIndex: 3,
           backgroundColor: 'primary.main',
+          overflow: 'hidden'
         }}
       />
       <TextLayerUp
@@ -61,10 +77,11 @@ const EnterAnimation: React.FC<BooleanStateProps> = ({ setState, state }): JSX.E
           position: 'absolute',
           top: 0,
           left: 0,
-          minHeight: '100vh',
-          minWidth: '100vw',
+          height: '100vh',
+          width: '100vw',
           zIndex: 2,
           backgroundColor: 'secondary.main',
+          overflow: 'hidden'
         }}
         onAnimationStart={handleSecondTextAnimationStart}
       />

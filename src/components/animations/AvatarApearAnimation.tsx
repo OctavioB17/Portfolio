@@ -42,11 +42,12 @@ const AvatarApearAnimation: React.FC<BooleanStateProps> = ({ setState }) => {
   return (
     <Box
       sx={{
-        minHeight: '100vh',
-        minWidth: '100vw',
+        height: '100vh',
+        width: '100vw',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        overflow: 'hidden',
         zIndex: -1
       }}
     >

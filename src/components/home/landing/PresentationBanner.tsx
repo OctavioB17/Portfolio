@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 const PresentationBanner: React.FC<BooleanStateProps> = (): JSX.Element => {
   const navigate = useNavigate()
 
-  const date: string = moment('20231101', "YYYYMMDD").fromNow()
+  const date: string = moment('20230101', "YYYYMMDD").fromNow()
 
   return (
     <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{borderRadius: '100%', width: '30vw', height: '30vw'}} sx={{width: '100vw', height: '100vh', backgroundColor: 'secondary.main', padding: '2.5vw', gap: '1vw'}}>
@@ -22,7 +22,7 @@ const PresentationBanner: React.FC<BooleanStateProps> = (): JSX.Element => {
           </Box>
           <Box sx={{display: 'flex', flexDirection: 'column', gap: '2vw'}}>
             <Typography sx={{textAlign: 'left', width: '50vw', fontSize: '1.5vw'}}>
-                I am a passionate and dedicated Developer with extensive experience. Working in the industry since {date}. My expertise spans across FrontEnd development using React, BackEnd development with Node.js, and infrastructure management on Amazon Web Services. I am proficient in database technologies such as MySQL. With a strong focus on JavaScript web development, I specialize in creating dynamic, user-friendly applications that solve real-world problems.
+                I am a passionate and dedicated Developer with extensive experience. Working in the industry since {date}. My expertise spans across FrontEnd development using React/Next.Js, BackEnd development with Node.js/Spring Boot, and infrastructure management on Amazon Web Services. I am proficient in relational database technologies. With a strong focus on Java/JavaScript web development, I specialize in creating dynamic, user-friendly applications that solve real-world problems.
             </Typography>
             <Box sx={{display: 'flex', gap: '1vw'}}>
                 <Link target='_blank' href='https://portfolio-bruza.s3.us-east-1.amazonaws.com/CV/Octavio+Bruza.pdf'>

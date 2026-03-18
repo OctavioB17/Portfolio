@@ -12,7 +12,6 @@ import CulzoniOne from '../../assets/images/Projects/Culzoni/Grabación-2025-01-
 import CulzoniTwo from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-124555.gif'
 import CulzoniThree from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-124821.gif'
 import CulzoniFour from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125339.gif'
-import CulzoniFive from '../../assets/images/Projects/Culzoni/Grabación-2025-01-24-125448.gif'
 import PortfolioOne from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 091328.gif'
 import PortfolioTwo from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 092129.gif'
 import PortfolioThree from '../../assets/images/Projects/Portfolio/Grabación 2025-02-03 092226.gif'
@@ -36,9 +35,9 @@ export const mcfly: projectInfo = {
 export const culzoniDigital: projectInfo = {
     title: "Culzoni Digital",
     description: CulzoniDigitalDetails,
-    photosUrl: [CulzoniOne, CulzoniTwo, CulzoniThree, CulzoniFour, CulzoniFive],
-    technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "MySQL", "Docker", "Amazon Web Services", "Linux"],
-    projectUrl: "https://culzonidigital.site",
+    photosUrl: [CulzoniOne, CulzoniTwo, CulzoniThree, CulzoniFour],
+    technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "MySQL", "Docker", "Amazon Web Services", "Linux", "Java", "Spring Boot"],
+    projectUrl: "http://culzonidigitalfront.s3-website.us-east-2.amazonaws.com/",
     gitHubUrl: "Not public"
 }
 

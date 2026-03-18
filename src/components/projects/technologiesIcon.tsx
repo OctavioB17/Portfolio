@@ -1,4 +1,4 @@
-import { FaJs, FaReact, FaNodeJs, FaHtml5, FaCss3, FaAws, FaDocker, FaLinux } from "react-icons/fa";
+import { FaJs, FaReact, FaNodeJs, FaHtml5, FaCss3, FaAws, FaDocker, FaLinux, FaJava } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { SiRedux, SiExpress, SiJsonwebtokens, SiTypescript } from "react-icons/si";
 import { GiSpring } from "react-icons/gi";
@@ -6,6 +6,7 @@ import { IconType } from "react-icons";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiNestjs } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
+import { SiSpring } from "react-icons/si";
 
 
 const MaterialUI = () => (
@@ -32,5 +33,7 @@ export const technologiesIcon: { [key: string]: IconType } = {
     "React-Spring": GiSpring,
     "TypeScript": SiTypescript,
     "NestJS": SiNestjs,
-    "NextJS": RiNextjsFill
+    "NextJS": RiNextjsFill,
+    "Java": FaJava,
+    "Spring Boot": SiSpring
 };
