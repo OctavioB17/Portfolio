@@ -1,117 +1,200 @@
-import { Box, Button, Typography, IconButton } from '@mui/material';
-import React, { useState } from 'react';
-import { ExperienceBoxProps } from '../../../../interfaces/home/Home';
-import ModalComponent from '../../../reusable/ModalComponent';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { Box, Button, Chip, IconButton, Typography, useMediaQuery } from '@mui/material'
+import React, { useState } from 'react'
+import { ExperienceBoxProps } from '../../../../interfaces/home/Home'
+import ModalComponent from '../../../reusable/ModalComponent'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { TechnologyChip } from '../../../projects/technologiesIcon'
 
-const ExperiencesBox: React.FC<ExperienceBoxProps> = ({ institution: title, title: job, date, description, photo, certificates }): JSX.Element => {
-  const [openCertificate, setOpenCertificate] = useState<boolean>(false);
-  const [selectedCertificate, setSelectedCertificate] = useState<number>(0);
+const ExperiencesBox: React.FC<ExperienceBoxProps> = ({
+  institution,
+  title,
+  date,
+  description,
+  photo,
+  technologies = [],
+  impact,
+  certificates,
+}): JSX.Element => {
+  const [openCertificate, setOpenCertificate] = useState(false)
+  const [selectedCertificate, setSelectedCertificate] = useState(0)
+  const isSmallScreen = useMediaQuery('(max-width:900px)')
+  const certificateCount = certificates?.length ?? 0
 
-  const handleNext = () => {
-    setSelectedCertificate((prev) => (prev + 1) % (certificates?.length || 1));
-  };
-
-  const handlePrev = () => {
-    setSelectedCertificate((prev) => (prev - 1 + (certificates?.length || 1)) % (certificates?.length || 1));
-  };
+  const showPrevious = () => setSelectedCertificate((current) => (current - 1 + certificateCount) % certificateCount)
+  const showNext = () => setSelectedCertificate((current) => (current + 1) % certificateCount)
 
   return (
-    <Box sx={{ bgcolor: 'secondary.main', display: 'flex', padding: '1vw', borderRadius: '10px', gap: '1vw' }}>
-      <Box sx={{ padding: '2vw', bgcolor: 'primary.main', borderRadius: '10px', display: 'flex', alignItems: 'center' }}>
-        <Box component='img' src={photo} sx={{ width: '15vw' }} />
+    <Box
+      component="article"
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: isSmallScreen ? '1fr' : '220px minmax(0, 1fr)',
+        bgcolor: 'primary.main',
+        border: '1px solid rgba(23, 44, 102, .12)',
+        borderRadius: '16px',
+        overflow: 'hidden',
+        boxShadow: '0 10px 30px rgba(0, 24, 88, .06)',
+      }}
+    >
+      <Box
+        sx={{
+          minHeight: isSmallScreen ? 132 : 220,
+          p: isSmallScreen ? 2.5 : 3,
+          bgcolor: 'secondary.main',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Box
+          component="img"
+          src={photo}
+          alt={institution + ' logo'}
+          loading="eager"
+          sx={{
+            display: 'block',
+            width: isSmallScreen ? 'min(65%, 220px)' : '100%',
+            maxWidth: 190,
+            maxHeight: isSmallScreen ? 86 : 110,
+            objectFit: 'contain',
+          }}
+        />
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1vw' }}>
-        <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-          <Box sx={{display: 'flex', flexDirection: 'column'}}>
-            <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main', alignItems: 'center' }}>
-              <span  style={{fontWeight: 800, color: '#172c66', display: 'inline', fontSize: '3vw'}}>
+
+      <Box sx={{ minWidth: 0, p: 'clamp(20px, 3vw, 36px)', display: 'flex', flexDirection: 'column', gap: 2.25 }}>
+        <Box sx={{ display: 'flex', alignItems: { xs: 'flex-start', sm: 'flex-start' }, justifyContent: 'space-between', gap: 2, flexWrap: 'wrap' }}>
+          <Box sx={{ minWidth: 0 }}>
+            <Typography component="h3" sx={{ color: 'typography.main', fontWeight: 800, fontSize: 'clamp(1.7rem, 2.7vw, 2.4rem)', lineHeight: 1.1, overflowWrap: 'anywhere' }}>
+              {institution}
+            </Typography>
+            {title && (
+              <Typography component="p" sx={{ color: 'typography.main', fontWeight: 700, fontSize: 'clamp(1.05rem, 1.6vw, 1.3rem)', mt: 0.75 }}>
                 {title}
-              </span>
-            </Typography>
-            <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main', alignItems: 'center' }}>
-              <span style={{fontWeight: 700, color: '#172c66', display: 'block', fontSize: '2vw'}}>
-                {job}
-              </span>
-            </Typography>
+              </Typography>
+            )}
           </Box>
-          <Box sx={{alignContent: 'start'}}>
-            <Typography variant='h4' sx={{ display: 'flex', gap: '1vw', textDecoration: 'underline', color: 'terciary.main', alignItems: 'center' }}>
-              <span style={{fontWeight: 700, color: '#172c66', display: 'inline'}}>
-                {date}
-              </span>
-            </Typography>
-          </Box>
+          <Chip
+            label={date}
+            variant="outlined"
+            sx={{
+              minHeight: 36,
+              height: 'auto',
+              maxWidth: '100%',
+              bgcolor: '#fff9ed',
+              color: 'typography.main',
+              borderColor: 'rgba(23, 44, 102, .2)',
+              fontWeight: 700,
+              '& .MuiChip-label': { whiteSpace: 'normal', py: 0.75, lineHeight: 1.25 },
+            }}
+          />
         </Box>
-        <Box sx={{ textWrap: 'wrap', fontSize: '1.2vw' }}>
-          {description}
+
+        <Box sx={{ color: 'typography.main', fontSize: '1rem', lineHeight: 1.6 }}>
+          {typeof description === 'string'
+            ? <Typography sx={{ color: 'inherit', fontSize: 'inherit', lineHeight: 'inherit' }}>{description}</Typography>
+            : description}
         </Box>
-        {
-          certificates && certificates.length > 0 &&
-          <Box sx={{ display: 'flex', justifyContent: 'end' }}>
-            <Button 
-              onClick={() => setOpenCertificate(true)} 
-              variant='contained' 
-              sx={{ textTransform: 'none', bgcolor: 'button.main', color: 'button.textSecondary', fontSize: '1vw', fontWeight: 700 }}
-            >
-              View Certificates
-            </Button>
+
+        {impact && (
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 2,
+              p: 2,
+              borderLeft: '4px solid #f582ae',
+              bgcolor: 'rgba(139, 211, 221, .28)',
+              borderRadius: '0 10px 10px 0',
+            }}
+          >
+            <Typography sx={{ flex: '0 0 auto', color: 'typography.main', fontWeight: 800, fontSize: 'clamp(1.45rem, 2vw, 1.8rem)', lineHeight: 1 }}>
+              {impact.value}
+            </Typography>
+            <Typography sx={{ color: 'typography.main', fontSize: '.95rem', lineHeight: 1.4 }}>
+              {impact.label}
+            </Typography>
           </Box>
-        }
-        {
-          certificates && certificates.length > 0 &&
+        )}
+
+        {technologies.length > 0 && (
           <Box>
-            <ModalComponent 
-              state={openCertificate} 
+            <Typography sx={{ color: 'typography.main', fontWeight: 700, fontSize: '.9rem', mb: 1 }}>
+              Technologies & tools
+            </Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75 }}>
+              {technologies.map((technology) => (
+                <TechnologyChip
+                  key={technology}
+                  technology={technology}
+                  variant="outlined"
+                  sx={{ height: 30, fontSize: '.78rem', borderColor: 'rgba(23, 44, 102, .22)' }}
+                />
+              ))}
+            </Box>
+          </Box>
+        )}
+
+        {certificateCount > 0 && (
+          <>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-start', mt: 'auto' }}>
+              <Button
+                onClick={() => setOpenCertificate(true)}
+                variant="contained"
+                sx={{
+                  minHeight: 44,
+                  px: 2,
+                  bgcolor: 'button.main',
+                  color: 'button.textSecondary',
+                  textTransform: 'none',
+                  fontWeight: 700,
+                }}
+              >
+                {certificateCount > 1 ? 'View certificates' : 'View certificate'}
+              </Button>
+            </Box>
+            <ModalComponent
+              state={openCertificate}
               setState={setOpenCertificate}
-              title={certificates[selectedCertificate].title}
+              title={certificates?.[selectedCertificate]?.title}
             >
-              <Box sx={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <IconButton 
-                  onClick={handlePrev}
-                  sx={{ 
-                    position: 'absolute', 
-                    left: '-2vw',
-                    color: 'button.main',
-                    '&:hover': { color: 'button.main', opacity: 0.8 }
-                  }}
+              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, maxWidth: '92vw' }}>
+                <IconButton
+                  onClick={showPrevious}
+                  aria-label="Previous certificate"
+                  sx={{ minWidth: 44, minHeight: 44, flex: '0 0 auto', color: 'button.main' }}
                 >
-                  <FaChevronLeft size={24} />
+                  <FaChevronLeft aria-hidden="true" />
                 </IconButton>
-                {React.createElement(certificates[selectedCertificate].image)}
-                <IconButton 
-                  onClick={handleNext}
-                  sx={{ 
-                    position: 'absolute', 
-                    right: '-2vw',
-                    color: 'button.main',
-                    '&:hover': { color: 'button.main', opacity: 0.8 }
-                  }}
+                <Box sx={{ minWidth: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                  {certificates && React.createElement(certificates[selectedCertificate].image)}
+                </Box>
+                <IconButton
+                  onClick={showNext}
+                  aria-label="Next certificate"
+                  sx={{ minWidth: 44, minHeight: 44, flex: '0 0 auto', color: 'button.main' }}
                 >
-                  <FaChevronRight size={24} />
+                  <FaChevronRight aria-hidden="true" />
                 </IconButton>
               </Box>
-              <Box sx={{ display: 'flex', justifyContent: 'center', gap: '0.5vw', marginTop: '1vw' }}>
-                {certificates.map((_, index) => (
-                  <Box
-                    key={index}
-                    sx={{
-                      width: '0.5vw',
-                      height: '0.5vw',
-                      borderRadius: '50%',
-                      bgcolor: index === selectedCertificate ? 'button.main' : 'gray',
-                      cursor: 'pointer'
-                    }}
+              <Box role="group" aria-label="Choose a certificate" sx={{ display: 'flex', justifyContent: 'center', gap: 0.5, mt: 1 }}>
+                {certificates?.map((certificate, index) => (
+                  <IconButton
+                    key={certificate.title ?? index}
                     onClick={() => setSelectedCertificate(index)}
-                  />
+                    aria-label={'Show certificate ' + (index + 1)}
+                    aria-pressed={index === selectedCertificate}
+                    sx={{ minWidth: 44, minHeight: 44 }}
+                  >
+                    <Box sx={{ width: 9, height: 9, borderRadius: '50%', bgcolor: index === selectedCertificate ? 'button.main' : 'rgba(23,44,102,.28)' }} />
+                  </IconButton>
                 ))}
               </Box>
             </ModalComponent>
-          </Box>
-        }
+          </>
+        )}
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default ExperiencesBox;
+export default ExperiencesBox

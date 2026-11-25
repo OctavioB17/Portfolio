@@ -3,26 +3,44 @@ import React from 'react'
 import Work from './WorkAndStudies/Work'
 import Studies from './WorkAndStudies/Studies'
 
+const sectionHeadingSx = {
+  color: 'typography.main',
+  fontWeight: 800,
+  fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+  lineHeight: 1.1,
+  textDecoration: 'underline',
+  textDecorationColor: '#f582ae',
+  textDecorationThickness: '5px',
+  textUnderlineOffset: '7px',
+}
+
 const WorkAndStudies: React.FC = (): JSX.Element => {
-  const isSmallScreen = useMediaQuery('(max-width:1200px)');
+  const isSmallScreen = useMediaQuery('(max-width:900px)')
 
   return (
-    <Box sx={{width: '100vw', bgcolor: 'primary.main',  padding: isSmallScreen ? '2vw' : '3vw', paddingBottom: '10vw', paddingTop: isSmallScreen ? '10vw' : ''}}>
-      <Typography variant={ isSmallScreen ? 'h3' : 'h2'} sx={{textDecoration: 'underline', color: 'button.main', display: 'flex', padding: isSmallScreen ? '5vw' : '', paddingBottom: isSmallScreen ? '5vw' : '3vw' }}>
-        <span style={{fontWeight: 800, color: '#172c66', display: 'inline'}}>
-          Work experience
-        </span>
-      </Typography>
-      <Box>
-        <Work/>
-      </Box>
-      <Typography variant={ isSmallScreen ? 'h3' : 'h2'} sx={{textDecoration: 'underline', color: 'button.main', display: 'flex', padding: isSmallScreen ? '5vw' : '', paddingBottom: isSmallScreen ? '10vw' : '3vw', paddingTop: isSmallScreen ? '20vw' : '5vw' }}>
-        <span style={{fontWeight: 800, color: '#172c66', display: 'inline'}}>
-          Studies
-        </span>
-      </Typography>
-      <Box>
-        <Studies/>
+    <Box
+      component="section"
+      sx={{
+        width: '100%',
+        bgcolor: 'primary.main',
+        px: isSmallScreen ? 'clamp(20px, 5vw, 32px)' : 'clamp(40px, 7vw, 104px)',
+        py: isSmallScreen ? 'clamp(56px, 12vw, 88px)' : 'clamp(72px, 7vw, 104px)',
+      }}
+    >
+      <Box sx={{ maxWidth: 1320, mx: 'auto' }}>
+        <Box component="section" aria-labelledby="experience-heading">
+          <Typography id="experience-heading" component="h2" sx={{ ...sectionHeadingSx, mb: 3.5 }}>
+            Work experience
+          </Typography>
+          <Work />
+        </Box>
+
+        <Box component="section" aria-labelledby="studies-heading" sx={{ mt: isSmallScreen ? 7 : 9 }}>
+          <Typography id="studies-heading" component="h2" sx={{ ...sectionHeadingSx, mb: 3.5 }}>
+            Studies
+          </Typography>
+          <Studies />
+        </Box>
       </Box>
     </Box>
   )

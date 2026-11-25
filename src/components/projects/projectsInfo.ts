@@ -22,14 +22,16 @@ import CulzoniDigitalDetails from "./CulzoniDigitalDetails";
 import EReduxDetails from "./EReduxDetails";
 import PortfolioDetails from "./PortfolioDetails";
 import MariaPininaDetails from "./MariaPininaDetails";
+import { dialoar, mainaOutbound, vun } from './featuredProjectDetails'
+
+export { dialoar, mainaOutbound, vun }
 
 export const mcfly: projectInfo = {
     title: "McFly",
     description: McFlyDetails,
     photosUrl: [McFlyOne, McFlyTwo, McFlyThree, McFlyFour],
     technologies: ["HTML5", "CSS3", "JavaScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "MySQL", "Docker", "Amazon Web Services", "Linux"],
-    projectUrl: "http://mcflyfrontbucket.s3-website-us-east-1.amazonaws.com/",
-    gitHubUrl: "Not public"
+
 }
 
 export const culzoniDigital: projectInfo = {
@@ -37,7 +39,6 @@ export const culzoniDigital: projectInfo = {
     description: CulzoniDigitalDetails,
     photosUrl: [CulzoniOne, CulzoniTwo, CulzoniThree, CulzoniFour],
     technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "MySQL", "Docker", "Amazon Web Services", "Linux", "Java", "Spring Boot"],
-    projectUrl: "http://culzonidigitalfront.s3-website.us-east-2.amazonaws.com/",
     gitHubUrl: "Not public"
 }
 
@@ -46,16 +47,15 @@ export const eredux: projectInfo = {
     description: EReduxDetails,
     photosUrl: [EReduxOne, EReduxTwo, EReduxThree, EReduxFour],
     technologies: ["HTML5", "CSS3", "JavaScript", "React.JS", "Redux", "Amazon Web Services"],
-    projectUrl: "http://ereduxbruzaoctavio.s3-website-us-east-1.amazonaws.com",
-    gitHubUrl: "Not public"
+
 }
 
 export const portfolio: projectInfo = {
     title: "Portfolio",
     description: PortfolioDetails,
     photosUrl: [PortfolioOne, PortfolioTwo, PortfolioThree],
-    technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.JS", "React-Spring", "Amazon Web Services"],
-    projectUrl: "https://octaviobruza.com",
+    technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.JS", "Amazon Web Services"],
+    projectUrl: "https://octavio-portfolio-six.vercel.app",
     gitHubUrl: "https://github.com/OctavioB17/Portfolio"
 }
 
@@ -64,6 +64,6 @@ export const mariaPinina: projectInfo = {
     description: MariaPininaDetails,
     photosUrl: [MariaPininaOne, MariaPininaTwo, MariaPininaThree],
     technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Material-UI", "React.JS", "Node.JS", "Express.JS", "Json Web Token", "PostgreSQL", "Docker", "Amazon Web Services", "Linux"],
-    projectUrl: "http://maria-pinina-front.s3-website-us-east-1.amazonaws.com/",
-    gitHubUrl: "https://github.com/OctavioB17/MariaPininaBackend"
+    projectUrl: "https://maria-pinina-visual-preview.vercel.app",
+    gitHubUrl: "https://github.com/OctavioB17/MariaPininaFront"
 }

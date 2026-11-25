@@ -3,6 +3,7 @@ export interface projectInfo {
     description: React.FC
     photosUrl: string[]
     technologies: string[]
-    projectUrl: string
-    gitHubUrl: string
+    projectUrl?: string
+    gitHubUrl?: string
+    status?: string
 }

@@ -1,5 +1,4 @@
 import { Box, Button, Link, Typography } from '@mui/material'
-import moment from 'moment'
 import { BooleanStateProps } from '../../interfaces/Reusable'
 import SectionWithPhoto from '../home/landing/SectionWithPhoto'
 import { FaLaptopCode } from 'react-icons/fa'
@@ -14,14 +13,12 @@ import OctavioBruza from  "../../assets/images/Octavio-Bruza.jpg"
 const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => {
 
   const navigate = useNavigate()
-  const date: string = moment('20231101', "YYYYMMDD").fromNow()
-
   return (
     <Box sx={{width: '100vw', bgcolor: 'secondary.main'}}>
         <Box>
           <Box sx={{ width: '100%', padding: '1vw', paddingTop: '5vw', display: 'flex' }}>
-            <Typography variant='h1' sx={{ fontSize: '3rem', fontWeight: '800', display: 'flex', flexDirection: 'column', width: '100%', textAlign: 'center'}}>
-              Hey! <span style={{ fontWeight: '800', fontSize: '3.5rem', color: '#172c66', textDecoration: 'underline', textDecorationColor: '#f582ae' }}>FullStack Developer</span> here.
+            <Typography component='h1' variant='h1' sx={{ fontSize: 'clamp(2rem, 8vw, 3rem)', lineHeight: 1.05, fontWeight: 800, display: 'flex', flexDirection: 'column', width: '100%', textAlign: 'center', py: '4vw'}}>
+              Hey, I’m Octavio.<span style={{ fontWeight: 800, fontSize: 'clamp(2.35rem, 11vw, 3.5rem)', lineHeight: 1, color: '#172c66', textDecoration: 'underline', textDecorationColor: '#f582ae' }}>Full-stack<br/>developer</span>
             </Typography>
           </Box>
           <SectionWithPhoto imgUrl={OctavioBruza} photoSx={{width: '101vw', height: '101vw', borderTopLeftRadius: '50%', borderTopRightRadius: '50%'}} sx={{backgroundColor: 'secondary.main', display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
@@ -30,7 +27,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', paddingLeft: '3vw'}}>  
                 <ChatBubble position='left'>
                   <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                      I am a passionate and dedicated Developer
+                      I build useful software from frontend to infrastructure.
                   </Typography>
                 </ChatBubble>
                 <FaLaptopCode style={{fontSize: '3rem'}}/>
@@ -38,7 +35,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', flexDirection: 'row-reverse', justifyContent: 'space-around'}}>
               <ChatBubble position='right'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                    Working in the industry since {date}.
+                    Full-stack developer at Culzoni since November 2023.
                 </Typography>
               </ChatBubble>
               <FaGears style={{fontSize: '3rem'}}/>
@@ -46,7 +43,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', paddingLeft: '3vw'}}>
               <ChatBubble position='left'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                    My expertise spans across FrontEnd development using React/Next.js
+                    Frontend: React, Next.js and TypeScript.
                 </Typography>
               </ChatBubble>
               <FaCode style={{fontSize: '3rem'}}/>
@@ -54,7 +51,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', flexDirection: 'row-reverse', justifyContent: 'space-around'}}>
               <ChatBubble position='right'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                    BackEnd development with Node.js/Java
+                    Backend: Node.js, NestJS and Java.
                 </Typography>
               </ChatBubble>
               <LuBinary style={{fontSize: '3rem'}}/>
@@ -62,7 +59,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', paddingLeft: '3vw'}}>
               <ChatBubble position='left'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                    And infrastructure management on Amazon Web Services.
+                    Infrastructure: AWS, Docker, Linux and cloud deployments.
                 </Typography>
               </ChatBubble>
               <PiTreeStructure style={{fontSize: '3rem'}}/>
@@ -70,7 +67,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', flexDirection: 'row-reverse', justifyContent: 'space-around'}}>
               <ChatBubble position='right'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                  I am proficient in database technologies such as MySQL.
+                  PostgreSQL, MySQL, Prisma and Redis for data and background jobs.
                 </Typography>
               </ChatBubble>
               <GiDatabase style={{fontSize: '3rem'}}/>
@@ -78,7 +75,7 @@ const PresentationBannerPhone: React.FC<BooleanStateProps> = (): JSX.Element => 
             <Box sx={{display: 'flex', alignItems: 'end', paddingLeft: '3vw'}}>
               <ChatBubble position='left'>
                 <Typography sx={{fontSize: '6vw', padding: '2vw', zIndex: 3, fontWeight: 600}}>
-                I specialize in creating dynamic, user-friendly applications that <span style={{textDecoration: 'underline', color: '#f582ae'}}><span style={{color: '#172c66'}}>solve real-world problems</span></span>.
+                I use AI APIs, tool calling and MCP to build assistants and <span style={{textDecoration: 'underline', color: '#f582ae'}}><span style={{color: '#172c66'}}>agent workflows</span></span>.
                 </Typography>
               </ChatBubble>
               <BiWorld style={{fontSize: '3rem'}}/>

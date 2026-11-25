@@ -16,11 +16,22 @@ export interface PositionContextType extends Position {
     setPosition: React.Dispatch<React.SetStateAction<DOMRect | null>>;
 }
 
-export interface ProjectBoxProps extends StringArrayProps, ImageSliderProps {
+export interface ProjectBoxProps {
+    strings?: string[],
     title?: string,
     description?: string,
     projectUrl?: string,
     sx?: SxProps,
+    slidesPerView?: number,
+    spaceBetween?: number,
+    photoStyle?: CSSProperties,
+    coverColor?: string,
+    coverTextColor?: string,
+    eyebrow?: string,
+    technologies?: string[],
+    technologyLimit?: number,
+    status?: string,
+    hideTitle?: boolean,
 }
 
 export interface EnterAnimationProps extends BooleanStateProps {
@@ -31,7 +42,8 @@ export interface EnterAnimationProps extends BooleanStateProps {
 export interface ImageSliderProps extends StringArrayProps {
     slidesPerView: number,
     spaceBetween: number,
-    photoStyle?: CSSProperties
+    photoStyle?: CSSProperties,
+    onAspectRatioChange?: (aspectRatio: number) => void,
 }
 
 export interface ExperienceBoxProps {
@@ -40,6 +52,11 @@ export interface ExperienceBoxProps {
     date: string,
     description: ReactElement | string,
     photo: string,
+    technologies?: string[],
+    impact?: {
+        value: string,
+        label: string,
+    },
     certificates?: Array<{
         image: React.FC,
         title?: string

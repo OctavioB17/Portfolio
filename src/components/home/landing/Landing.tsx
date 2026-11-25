@@ -14,7 +14,7 @@ const Landing: React.FC = (): JSX.Element => {
 
   return (
     <AnimatedWrapper>
-      <Box sx={{ display: 'flex', flexDirection: 'column', position: 'absolute', overflowX: 'hidden' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', position: 'absolute', top: 0, left: 0, width: '100%', overflowX: 'hidden' }}>
         {
           isSmallScreen ?
           <PresentationBannerPhone/>

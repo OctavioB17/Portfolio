@@ -62,6 +62,43 @@
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: 'Proxima-Nova', Arial, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 3px solid #d94d85;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #f582ae;
+  color: #001858;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body.no-scroll {
   overflow: hidden;
   position: fixed;

@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.vercel
+/public/portfolio-originals/
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +24,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary captures used to assemble the project walkthrough GIFs
+src/assets/images/Projects/**/.frames/
+src/assets/images/Projects/Vun/vun-contact-desktop.png
+/vun-live-hero-desktop.png
+/vun-capture-hero.png
+/vun-hero-candidate.png

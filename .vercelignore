@@ -1,0 +1,35 @@
+# Local project checkouts, research captures and build artefacts
+/actual-sites/
+/MaxNews/
+/.capture-vun/
+/.npm-cache/
+/.playwright-mcp/
+/graphify-out/
+/portfolio-gif-frames/
+/vertice-recovery-candidates/
+/dist/
+/dist-preview/
+/data/
+/public/portfolio-originals/
+
+# Temporary Vértice and portfolio capture files in the repository root
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+/*.webp
+/*.mp4
+/preview.html
+/preview-main.tsx
+/src/preview-main.tsx
+/src/assets/images/Projects/Gald/
+/src/assets/images/Projects/McFly/*-optimized.gif
+/vite.preview.config.ts
+/capture-vun.mjs
+/.maxnews*
+/maxnews*.py
+
+# Never send local environment files or certificates
+.env*
+**/.env*
+*.pem
